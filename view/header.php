@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title><?=$title?></title>
 	<table width="100%"  >
 		<tr>
@@ -11,5 +11,6 @@
 	
 		</tr>
 	</table>
+
 </head>
 <body>

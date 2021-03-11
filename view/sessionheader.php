@@ -12,13 +12,17 @@ if (session_status() == PHP_SESSION_NONE) {
 	
 	<title><?=$title?></title>
 	<table width="100%"  >
-		<tr>
-		<th align="center">
+		<th align="left">
 			<img src="../model/media/logo.jpg" height="60px">
 		</th>
-	
-		</tr>
+		<th align="Right">
+                            <h3>
+								<?php echo $_SESSION['current_user']['userid']; ?> | 
+                                <a href="../controller/logout.php" >Logout</a> |
+                            </h3>
+                            
+                </th>
 	</table>
 
-n</head>
+</head>
 <body>

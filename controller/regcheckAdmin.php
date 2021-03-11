@@ -41,7 +41,7 @@
 			}else{
 				
                 $user = ['username'=> $username,'password'=> $password, 'userid'=> $userid, 'email'=>$email, 'dob'=>$dob,'address'=>$address];
-                print_r($user);
+               // print_r($user);
                 $file_name='../model/admin.json';
 
         
@@ -57,8 +57,8 @@
 						$jsonData = json_encode($tempArray);
 						file_put_contents($file_name, $jsonData);
 				}
+                header('location: ../view/loginAdmin.php');
     
-                echo "validated";
 			}
 		}
 	}

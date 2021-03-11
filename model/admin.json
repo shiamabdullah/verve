@@ -1,1 +1,34 @@
-[{"username":"Abdullah Al Mamun","password":12345678,"userid":"ab123","email":"shiamabdullah1@gmail.com","dob":"2021-03-23","address":"East Adalat Para, 197, Block 3"},{"username":"Abdulla","password":"signupadmin.php","userid":"abc123","email":"shiamabdullah1@gmail.com","dob":"2021-03-25","address":"East Adalat Para, 197, Block 3"}]
+[
+    {
+        "username": "Abdullah Al Mamun",
+        "password": "abc",
+        "userid": "abc",
+        "email": "shiamabdullah1@gmail.com",
+        "dob": "2021-03-23",
+        "address": "East Adalat Para, 197, Block 3"
+    },
+    {
+        "username": "Abdullah Al Mamun",
+        "password": 12345678,
+        "userid": "ab123",
+        "email": "shiamabdullah1@gmail.com",
+        "dob": "2021-03-23",
+        "address": "East Adalat Para, 197, Block 3"
+    },
+    {
+        "username": "Abdulla",
+        "password": "signupadmin.php",
+        "userid": "abc123",
+        "email": "shiamabdullah1@gmail.com",
+        "dob": "2021-03-25",
+        "address": "East Adalat Para, 197, Block 3"
+    },
+    {
+        "username": "Abdulla",
+        "password": "signupadmin.php",
+        "userid": "abc1235",
+        "email": "shiamabdullah1@gmail.com",
+        "dob": "2021-03-25",
+        "address": "East Adalat Para, 197, Block 3"
+    }
+]
