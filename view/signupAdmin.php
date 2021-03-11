@@ -2,7 +2,7 @@
     $title="Admin Sign Up";
 	include('header.php');
 ?>
-<form method="post" action="../controller/regCheck.php">
+<form method="post" action="../controller/regCheckAdmin.php">
 		<fieldset>
 			<legend>Sign Up</legend>
 			<table>
