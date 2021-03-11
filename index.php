@@ -1,3 +1,6 @@
 <?php
-	header('location: view/index.html');
+
+	header('location: view/home.php');
+	
+	
 ?>
