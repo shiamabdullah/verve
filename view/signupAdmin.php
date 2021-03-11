@@ -13,7 +13,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>User ID<br></td>
+                    <td>User Name<br></td>
                     <td>
                         <input type="text" name="username" value="">
                     </td>

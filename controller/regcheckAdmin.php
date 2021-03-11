@@ -3,36 +3,46 @@
 
 	if(isset($_POST['signup'])){
 
-		$username = $_POST['username'];
+		$username = $_POST['name'];
 		$password = $_POST['password'];
+		$userid = $_POST['username'];
 		$repass = $_POST['repass'];
 		$email = $_POST['email'];
+        $dob= $_POST['dob'];
+        $address= $_POST['address'];
 
-		if($username == "" || $password == "" || $email == "" ){
+        $allowed = array(".", "-", "_");
+
+
+
+		if($username == "" || $password == "" || $userid == "" || $email == "" || $dob == ""  ){
 			echo "null value found...";
 		}else{
-			if($password == $repass){
+            if(strlen($username)<2){
+                echo "name must be atleast 2 char\n";
 
-				$user = ['username'=> $username, 'password'=> $password, 'email'=>$email];
+            }
+           
+            if(strlen($userid)<2){
+                echo "name must be atleast 2 char\n";
 
-				$_SESSION['current_user'] = $user;		
-				$json = json_encode($user);
-				echo $json;
-				$file_name= $_SERVER['DOCUMENT_ROOT'].'/MID_LAB_TASK_JSON_08/user-mgt/model/user.json';
-				$file_name2= $_SERVER['DOCUMENT_ROOT'].'/MID_LAB_TASK_JSON_08/user-mgt/model/users.json';
-				//$myfile = fopen($_SERVER['DOCUMENT_ROOT'].'/MID_LAB_TASK_JSON_08/user-mgt/model/user.json', "w");
-				$myfile = fopen($file_name, "w");
-				fwrite($myfile, $json);
-				fclose($myfile);
+            }
+            elseif( !ctype_alnum(str_replace($allowed, '', $userid )) ){
+                echo "name must contain alphanumeric char\n";
+            }
 
-        		$myfile2=fopen($file_name2, 'w');
-        		fwrite($myfile2, '['.$json.']');
-				fclose($myfile2);
+            else if(strlen($password)<8){
+                echo " password must be 8 chars";
+                }
 
+			else if($password != $repass){
 
-				header('location: ../view/login.html');
-			}else{
 				echo "password & confirm password mismatch...";
+			}else{
+				
+                $user = ['username'=> $username,'password'=> $password, 'userid'=> $userid, 'email'=>$email, 'dob'=>$dob,'address'=>$address];
+                print_r($user);
+                echo "validated";
 			}
 		}
 	}
