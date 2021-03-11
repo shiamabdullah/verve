@@ -42,6 +42,22 @@
 				
                 $user = ['username'=> $username,'password'=> $password, 'userid'=> $userid, 'email'=>$email, 'dob'=>$dob,'address'=>$address];
                 print_r($user);
+                $file_name='../model/admin.json';
+
+        
+				if(filesize($file_name)==0){
+       			$json=json_encode($user);
+        		$myfile=fopen($file_name, 'w');
+        		fwrite($myfile, '['.$json.']');
+				}
+				else{
+						$inp = file_get_contents($file_name);
+						$tempArray = json_decode($inp);
+						array_push($tempArray, $user);
+						$jsonData = json_encode($tempArray);
+						file_put_contents($file_name, $jsonData);
+				}
+    
                 echo "validated";
 			}
 		}
