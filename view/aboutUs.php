@@ -2,7 +2,14 @@
     $title="About Us";
 	include('header.php');
 ?>
-
+<table border="1" width="100%" >
+			<tr>
+				<th align="center">
+					<a href="home.php"> Home</a>
+				</th>
+			</tr>
+			
+		</table>
 <table>
     <tr>
         <h1>Welcome to MAB </h1>
