@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Login</title>
 </head>
 <body>
     <table border="1" width="100%" align="center">
@@ -18,28 +18,34 @@
             </td>
             <td align="Right">
                 <h4>
-                    <a href="viewProCus.php">Profile</a> |
-                    <a href="cartCus.php">MyCart</a> |
-                    <a href="contact.php">Contact</a> |
-                    <a href="../controller/logout.php" >Logout</a> 		
+                    <a href="homeeCus.php"> Home</a> |
+                    <a href="contact.php"> Contact</a> |
+                    <a href="../controller/logout.php">Logout</a> 			
                 </h4>
             </td>
         </tr>
     </table>
+    <table border="1" width="100%" align="center" height="400px">
+        <td align="center">
+            
+            <form method="post" action="../controller/logcheckCus.php">               
+                <fieldset style="width:320px">
+                    <legend height>Edit Profile</legend>
+                    <table height="200px">
+                        <tr>
 
-    <table width="100%" border="1">   
-        <td height='200px' align="left">
-            <h3> Welcome to MAB </h3> 
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
         </td>
-    </table>
-
+        </table>
     <table border="1" width="100%" height="50px">
         <td colspan="3"><center>Copyright2021@MAB</center></td> 
     </table> 
     
 </body>
 </html>
-
 <?php
 	}else{
 		header('location: ../view/login.html ');
