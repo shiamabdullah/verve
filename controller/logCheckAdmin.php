@@ -24,7 +24,7 @@ if (session_status() == PHP_SESSION_NONE) {
 				$_SESSION['flag'] = true;
 				echo $user[$key]['password'];
 				$_SESSION['current_user'] = $user[$key];
-				header('location: ../view/home.php');
+				header('location: ../view/homeAdmin.php');
 			}else{
 				echo "invalid user...";
 			}
