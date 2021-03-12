@@ -16,10 +16,7 @@
     </tr>
     <tr>
         <h4>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis eum dolor est iste molestiae laboriosam dolorem error obcaecati consequatur expedita magni, illum iusto voluptate porro, fugit quas. Facere, sunt! 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae, quam nam debitis, pariatur animi sit architecto eos corrupti dolorem accusamus modi explicabo a beatae eaque aspernatur! Inventore, corrupti nobis?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae, quam nam debitis, pariatur animi sit architecto eos corrupti dolorem accusamus modi explicabo a beatae eaque aspernatur! Inventore, corrupti nobis?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae, quam nam debitis, pariatur animi sit architecto eos corrupti dolorem accusamus modi explicabo a beatae eaque aspernatur! Inventore, corrupti nobis?
+            MAB is the leading online marketplace in South Asia connecting thousands of sellers with millions of customers in  Bangladesh and India
         </h4>
     </tr>
 </table>

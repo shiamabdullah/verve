@@ -1,10 +1,14 @@
+<?php
+	session_start();
+	if(isset($_SESSION['flag'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Index</title>
 </head>
 <body>
     <table border="1" width="100%" align="center">
@@ -14,8 +18,8 @@
             </td>
             <td align="Right">
                 <h4>
-                    <a href="aboutUs.php"> About Us</a> |
-                    <a href="signupCus.html">Signup</a> 			
+                    <a href="homeeCus.php"> Home</a> | 
+                    <a href="../controller/logout.php" >Logout</a> 			
                 </h4>
             </td>
         </tr>
@@ -23,24 +27,14 @@
     <table border="1" width="100%" align="center" height="400px">
         <td align="center">
             
-            <form method="post" action="../controller/logcheckCus.php">               
+            <form method="post" action="logcheckCus.php">               
                 <fieldset style="width:320px">
-                    <legend height>LOGIN</legend>
-                    <table height="200px">
+                    <legend height>Contact</legend>
+                    <table height="100px">
                         <tr>
-                            <td>Username</td>
-                            <td><input type="text" name="username" value=""></td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input type="password" name="password" value=""></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <input type="submit" name="submit" value="Submit"> 
-                                <a href="forgotpassword.html">Forgot Password?</a>
-                            </td>
+                            <h3>Md.Shahil Patwary</h3>
+                            <h4>Technical Director| MAB Group |</h4> 
+                            <h5>Phone:01788264342 | Email:Shahilpatwary@gmail.com </h5>  
                         </tr>
                     </table>
                 </fieldset>
@@ -53,3 +47,8 @@
     
 </body>
 </html>
+<?php
+	}else{
+		header('location: ../view/login.html ');
+	}
+?>

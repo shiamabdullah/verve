@@ -18,7 +18,7 @@
             </td>
             <td align="Right">
                 <h4>
-                    <a href="Contact.html">Contact</a> |
+                    <a href="contact.php">Contact</a> |
                     <a href="../controller/logout.php" >Logout</a> 		
                 </h4>
             </td>
