@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['flag'])){
+    $user = $_SESSION['loggedInUser'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +36,16 @@
                     <legend height>Profile</legend>
                     <table height="200px">
                         <tr>
-
+                            <td>User Name: <?php echo $user['username'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Email : <?php echo $user['email'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Gender : <?php echo $user['gender'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>DOB : <?php echo $user['dob'] ?></td>
                         </tr>
                     </table>
                 </fieldset>

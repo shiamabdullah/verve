@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['flag'])){
+        $user = $_SESSION['loggedInUser'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,12 +29,50 @@
     <table border="1" width="100%" align="center" height="400px">
         <td align="center">
             
-            <form method="post" action="../controller/logcheckCus.php">               
-                <fieldset style="width:320px">
-                    <legend height>Edit Profile</legend>
-                    <table height="200px">
+        <form method="post" action="../controller/regcheckCus.php">               
+                <fieldset style="width:320px" >
+                    <legend>
+                        <h3>
+                            Edit Profile
+                        </h3>
+                    </legend>
+                    <table align="center" height="400px" >
                         <tr>
+                            <td>Email <br></td>        
+                            <td> :<input type="email" name="email" value="<?php echo $user['email'] ?>"> </td>
+                        </tr>
+            
+                        <tr>
+                            <td>User Name<br></td>
+                            <td>:<input type="text" name="username" value="<?php echo $user['username'] ?>" readonly></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Password</td>        
+                            <td>:<input type="password" name="password" value="<?php echo $user['password'] ?>"><br></td>
+                        </tr>
+            
+                        <tr >
+                            <td>Confirm Password <br></td>
+                            <td>:<input type="password" name="re_password" value="<?php echo $user['password'] ?>"></td>
+                        </tr>
 
+                        <tr>        
+                            <td colspan="2">
+                                <fieldset>
+                                    <legend>Date of Birth</legend>
+                                    <input type="date" name="dob" value="<?php echo $user['dob'] ?>">
+                                </fieldset>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td><input type="text" name="gender" value="<?php echo $user['gender'] ?>" hidden></td>
+                        </tr>
+                        <tr align="right">
+                            <td " height=" 50px">
+                                <input type="submit" name="submit" value="Update Profile">
+                                <input type="reset" name="click" value="reset">
+                            </td>
                         </tr>
                     </table>
                 </fieldset>

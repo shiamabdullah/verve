@@ -20,6 +20,7 @@
         $customers = json_decode(fread($myfile, filesize($file_location)),true);
         foreach ($customers as $user){ 
             if($user['username'] == $username && $user['password']==$password){
+                $_SESSION['loggedInUser'] = $user;
                 $flag = true;
                 break;
             }
