@@ -1,12 +1,22 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
+
 }	
+
+if(!empty($_POST["remember"])) {
+	setcookie ("username",$_POST["username"],time()+ 3600,"/");
+	setcookie ("password",$_POST["password"],time()+ 3600,"/");
+} 
+else {
+	setcookie("username","");
+	setcookie("password","");
+}
 	if(isset($_POST['submit'])){
 
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		
+
 		$file_name='../model/admin.json';
         $myfile = fopen($file_name, "r");
 		$data = fread($myfile, filesize($file_name));
@@ -22,7 +32,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 			if($user[$key]['password']==$password){
 				$_SESSION['flag'] = true;
-				echo $user[$key]['password'];
+				//echo $user[$key]['password'];
 				$_SESSION['current_user'] = $user[$key];
 				header('location: ../view/homeAdmin.php');
 			}else{
@@ -33,3 +43,4 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
 ?>
+

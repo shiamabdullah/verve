@@ -1,6 +1,7 @@
 <?php 
-    $title="Sign Up";
+    $title="Login Admin";
 	include('header.php');
+
 ?>
 
 <form method="post" action="../controller/logCheckAdmin.php">
@@ -9,14 +10,21 @@
 			<table>
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username" value=""></td>
+					<td>
+					<input name="username" type="text" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>">
+				 	</td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password" value=""></td>
+					<td> <input name="password" type="password" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>"> </td>
 				</tr>
+
 				<tr>
-					<td></td>
+					<td>Remember Me</td>
+					<td><input type="checkbox" name="remember"?></td>
+				</tr>
+
+				<tr>
 					<td>
 						<input type="submit" name="submit" value="Submit"> 
 						<a href="signup.php">Signup</a>
@@ -25,6 +33,8 @@
 			</table>
 		</fieldset>
 	</form>
+
+	
 
 <?php 
 include('footer.php');
