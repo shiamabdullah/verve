@@ -2,6 +2,8 @@
 	$title='View Profile';
 	include('sessionheader.php');
     $user= $_SESSION['current_user'];
+
+    
 ?>
 	<table width="100%" align="center">    
 				<tr>
@@ -33,12 +35,12 @@
     <tbody>
         <td>
             <ul>
-                <li><a href="viewprofile.php"> View Profile</a></li>
-                <li><a href="editprofile.php"> Edit Profile</a></li>
-                <li><a href="changephoto.php"> Change Profile Picture</a></li>
-                <li><a href="changepass.php"> Change Passowrd</a></li>
+                <li><a href="viewprofileAdmin.php"> View Profile</a></li>
+                <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
+                <li><a href="changephotoAdmin.php"> Change Profile Picture</a></li>
+                <li><a href="changepassAdmin.php"> Change Passowrd</a></li>
             </ul>
-        </td>
+         </td>
 
         <td align="center">
             <fieldset style="width:80%">
