@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }	if(!isset($_SESSION['flag'])){
-		header('location: login.html');
+		header('location: loginAdmin.php');
 	}
 
     ?>
@@ -17,8 +17,9 @@ if (session_status() == PHP_SESSION_NONE) {
 		</th>
 		<th align="Right">
                             <h3>
+								<a href="../view/homeAdmin.php" >Home</a> |
 								<?php echo $_SESSION['current_user']['userid']; ?> | 
-                                <a href="../controller/logout.php" >Logout</a> |
+                                <a href="../controller/logout.php" >Signout</a>
                             </h3>
                             
                 </th>
