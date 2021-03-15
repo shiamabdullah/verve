@@ -17,7 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
 		</th>
 		<th align="center" width="50px">
 			<?php     $uid= $_SESSION['current_user']['userid']; $img_name= $uid.".png"; ?>
-			<img src="../Assets/Adminphotos/<?php echo"$img_name"; ?>" height="60px">
+			<img src="../Assets/Adminphotos/<?php echo"$img_name"; ?>" height="200px">
 
 		</th>
 		<th align="Right" width="30%">

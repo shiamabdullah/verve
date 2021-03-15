@@ -7,9 +7,7 @@
 					<center>
 					<h1>Admin Panel</h1>
 					</center>
-					<td colspan="3">
-						dasasda
-					</td>
+					
 				</tr>  
 				<tr>
 				<h2> Welcome,  <?php echo $_SESSION['current_user']['username']; ?> </h2> 

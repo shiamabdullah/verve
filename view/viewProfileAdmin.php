@@ -2,7 +2,18 @@
 	$title='View Profile';
 	include('sessionheader.php');
     $user= $_SESSION['current_user'];
+    
+    //image 
+    $uid= $_SESSION['current_user']['userid']; 
+    $img_name="../Assets/AdminPhotos/".$uid.".png";
+    $img="";
 
+    if(file_exists($img_name)){
+    $img=$img_name;
+    }
+    else {
+    $img="../model/media/user.png";
+    }
     
 ?>
 	<table width="100%" align="center">    
@@ -53,7 +64,7 @@
 
                                 </td>
                                 <td rowspan="4">
-                                <img src="../model/media/user.png" width="100" height="100">
+                                <img src="<?php echo"$img"; ?>" width="100" height="100">
                                 </td>
                             <tr>
                             <td>Email<br></td>
@@ -73,7 +84,7 @@
                              <tr>
                                     <td>Dob<br></td>
                                     <td>: <?php echo $user['dob']; ?></td>
-                                    <td> <a href="changepic.php" > Change Photo</a> </td>
+                                    <td> <a href="changephotoAdmin.php" > Change Photo</a> </td>
                              </tr>
 
 

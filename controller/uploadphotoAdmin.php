@@ -31,6 +31,7 @@ session_start();
     {       
          move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
          echo "uploaded";
+         header('location: ../view/homeAdmin.php');
          
     }
    else {
