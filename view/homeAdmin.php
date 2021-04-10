@@ -31,8 +31,8 @@
 						<h3> User Accounts</h3>
 						</center>
                         <ul>
-                            <li><a href="viewprofile.php"> View Users</a></li>
-                            <li><a href="editprofile.php"> Validate Users</a></li>
+                            <li><a href="viewUsers.php"> View Users</a></li>
+                            
                         </ul>
                
                     </td>
