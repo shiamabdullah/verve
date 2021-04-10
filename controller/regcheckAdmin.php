@@ -3,16 +3,15 @@
 
 	if(isset($_POST['signup'])){
 
-		$username = $_POST['name'];
+		$username = trim($_POST['name']," ");
 		$password = $_POST['password'];
-		$userid = $_POST['username'];
+		$userid = trim($_POST['username']," ");
 		$repass = $_POST['repass'];
-		$email = $_POST['email'];
+		$email = trim($_POST['email']," ");
         $dob= $_POST['dob'];
-        $address= $_POST['address'];
+        $address= trim($_POST['address']," ");
 
         $allowed = array(".", "-", "_");
-
 
 
 		if($username == "" || $password == "" || $userid == "" || $email == "" || $dob == ""  ){
@@ -57,7 +56,7 @@
 						$jsonData = json_encode($tempArray);
 						file_put_contents($file_name, $jsonData);
 				}
-                //header('location: ../view/loginAdmin.php');
+                header('location: ../view/loginAdmin.php');
     
 			}
 		}

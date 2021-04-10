@@ -42,8 +42,8 @@
 						<h3> Products</h3>
 						</center>
                         <ul>
-                            <li><a href="dashboard.php"> Add Product</a></li>
-                            <li><a href="vi.php"> View Product</a></li>
+                            <li><a href="addProduct.php"> Add Product</a></li>
+                            <li><a href="viewProductList.php"> View Product</a></li>
                             
                         </ul>
                

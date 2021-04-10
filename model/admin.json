@@ -30,5 +30,13 @@
         "email": "shiamabdullah1@gmail.com",
         "dob": "2021-03-25",
         "address": "East Adalat Para, 197, Block 3"
+    },
+    {
+        "username": "xyz",
+        "password": 87654321,
+        "userid": "xyza",
+        "email": "shiamabdullah1@gmail.com",
+        "dob": "2021-04-08",
+        "address": "East Adalat Para, 197, Block 3"
     }
 ]
