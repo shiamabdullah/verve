@@ -4,7 +4,7 @@ include('sessionheader.php');
 
 ?>
 
-<form method="post" action="../controller/regCheckAdmin.php">
+<form method="post" action="../controller/addProductCheck.php">
 		<fieldset>
 			<legend>Add Product</legend>
 			<table>
@@ -23,24 +23,22 @@ include('sessionheader.php');
                
 				<tr>
 					<td>Category</td>
-					<td><select name="Color">
-                        <option value="Red">Red</option>
-                        <option value="Green">Green</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Pink">Pink</option>
-                        <option value="Yellow">Yellow</option
+					<td><select name="category">
+                        <option value="Men">Men</option>
+                        <option value="Woman">Woman</option>
+                        <option value="Kids">Kids</option>
+                        <option value="Others">Others</option>
                         </select>
                         </td>
 				</tr>
 
                 <tr>
 					<td>Sub Category</td>
-					<td><select name="Color">
-                        <option value="Red">Red</option>
-                        <option value="Green">Green</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Pink">Pink</option>
-                        <option value="Yellow">Yellow</option
+					<td><select name="subCategory">
+                        <option value="Clothing">Clothing</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="Accessories">Accessories</option>
+                       
                         </select>
                         </td>
 				</tr>
