@@ -38,7 +38,7 @@
                     
                     <th>
                     <center>
-						 View Profile
+						 Edit Profile
 						</center>
                     </th>
     </thead>

@@ -42,7 +42,7 @@
 				<tr>
 					<td></td>
 					<td>
-						<input type="submit" name="signup" value="Submit"> 
+						<input type="submit" name="signup" value="Signup"> 
 						<a href="login.php">Login</a>
 					</td>
 				</tr>

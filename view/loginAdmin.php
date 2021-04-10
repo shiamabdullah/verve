@@ -5,9 +5,10 @@
 ?>
 
 <form method="post" action="../controller/logCheckAdmin.php">
-		<fieldset>
+
+		<fieldset >
+			<table align="center">
 			<legend>LOGIN</legend>
-			<table>
 				<tr>
 					<td>Username</td>
 					<td>
@@ -32,6 +33,8 @@
 				</tr>
 			</table>
 		</fieldset>
+		</table>
+
 	</form>
 
 	

@@ -28,7 +28,7 @@
 
             }
             elseif( !ctype_alnum(str_replace($allowed, '', $userid )) ){
-                echo "name must contain alphanumeric char\n";
+                echo "name can only contain alphanumeric char and characters, period,dash or underscore only \n";
             }
 
             else if(strlen($password)<8){
@@ -57,7 +57,7 @@
 						$jsonData = json_encode($tempArray);
 						file_put_contents($file_name, $jsonData);
 				}
-                header('location: ../view/loginAdmin.php');
+                //header('location: ../view/loginAdmin.php');
     
 			}
 		}
