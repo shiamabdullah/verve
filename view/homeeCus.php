@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['flag'])){
-    $user = $_SESSION['loggedInUser'];
+  //  $user = $_SESSION['loggedInUser'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@
 
     <table width="100%" border="1">   
         <td height='200px' align="left">
-            <h3> Welcome <?php echo $user['username'] ?></h3> 
+            <h3> Welcome <?php echo $_SESSION['username'] ?></h3> 
         </td>
     </table>
 

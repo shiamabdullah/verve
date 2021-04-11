@@ -1,11 +1,16 @@
 <?php
 	session_start();
+   // require_once('../model/userModel.php');
 	if(isset($_SESSION['flag'])){
-    $user = $_SESSION['loggedInUser'];
+    require_once('../model/userModel.php');
+    }else{
+		header('location: ../view/login.php ');
+	}
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,38 +33,40 @@
             </td>
         </tr>
     </table>
+    
+ 
     <table border="1" width="100%" align="center" height="400px">
-        <td align="center">
-            
-            <form method="post" action="../controller/logcheckCus.php">               
-                <fieldset style="width:320px">
-                    <legend height>Profile</legend>
-                    <table height="200px">
-                        <tr>
-                            <td>User Name: <?php echo $user['username'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Email : <?php echo $user['email'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Gender : <?php echo $user['gender'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>DOB : <?php echo $user['dob'] ?></td>
-                        </tr>
+    
+        <td align="center">  
+        
+                       <table height="200px">
+                       <?php 
+                                $users = getUserInformation($_SESSION["username"]);
+                                foreach($users as $user){
+                                    echo "<tr>
+                                    <td>User Name:{$user["name"]}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email :  {$user["email"]} </td>
+                                </tr>
+                                <tr>
+                                    <td>Gender :  {$user['gender']} </td>
+                                </tr>
+                                <tr>
+                                    <td>DOB :   {$user['dob']} </td>
+                                </tr>"; 
+                                }
+                                ?>
+                       
                     </table>
-                </fieldset>
-            </form>
-        </td>
-        </table>
+                </td>
+    </table>
+    
+    
+
     <table border="1" width="100%" height="50px">
         <td colspan="3"><center>Copyright2021@MAB</center></td> 
     </table> 
     
 </body>
 </html>
-<?php
-	}else{
-		header('location: ../view/login.html ');
-	}
-?>
