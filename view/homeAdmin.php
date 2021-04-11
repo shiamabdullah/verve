@@ -31,8 +31,8 @@
 						<h3> User Accounts</h3>
 						</center>
                         <ul>
-                            <li><a href="viewprofile.php"> View Users</a></li>
-                            <li><a href="editprofile.php"> Validate Users</a></li>
+                            <li><a href="viewUsers.php"> View Users</a></li>
+                            
                         </ul>
                
                     </td>
@@ -42,8 +42,8 @@
 						<h3> Products</h3>
 						</center>
                         <ul>
-                            <li><a href="dashboard.php"> Add Product</a></li>
-                            <li><a href="vi.php"> View Product</a></li>
+                            <li><a href="addProduct.php"> Add Product</a></li>
+                            <li><a href="viewProductList.php"> View Product</a></li>
                             
                         </ul>
                

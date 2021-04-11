@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"username":"lol","password":"12","email":"lol@gmail.com","gender":"Male","dob":"2021-03-04"},{"username":"name","password":"12","email":"name@gmail.com","gender":"Male","dob":"2021-03-10"},{"username":"lol","password":"12","email":"shahilpatwary@gmail.com","gender":"Male","dob":"2020-09-17"},{"username":"pagol","password":"12","email":"p@gmail.com","gender":"Male","dob":"2016-01-11"}]
+=======
+[{"username":"lol","password":"12","email":"lol@gmail.com","gender":"Male","dob":"2021-03-04"},{"username":"name","password":"12","email":"name@gmail.com","gender":"Male","dob":"2021-03-10"},{"username":"abc","password":"433","email":"shiamabdullah1@gmail.com","gender":"Male","dob":"2021-04-21"},{"username":"lulu","password":"123","email":"shiamabdullah1@gmail.com","gender":"Male","dob":"2021-04-14"}]
+>>>>>>> 501133ee4bc0da27afd586a9b54a0d5ebd549d5a

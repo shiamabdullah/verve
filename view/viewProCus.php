@@ -6,7 +6,8 @@
     }else{
 		header('location: ../view/login.php ');
 	}
-    
+    // $email = "shahil123@gmail.com";
+    // echo base64_encode($email)
 ?>
 <!DOCTYPE html>
 <html lang="en">

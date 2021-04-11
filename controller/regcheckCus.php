@@ -63,7 +63,7 @@
 				// }
                 //$conn=mysqli_connect('localhost','root','','webtech');
 
-                $status=insertUser();
+                $status=insertUser($customer);
                 if($status)
                 {
                     header('location: ../view/loginCus.html');
