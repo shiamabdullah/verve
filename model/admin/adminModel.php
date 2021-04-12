@@ -26,20 +26,22 @@
             return false;
           }
   }
-  // function insertUser($user)
-  // {
-  //   $conn=getConnection();
-  //   $sql="INSERT INTO `admin` (`name`, `username`, `password`, `usertype`, `gender`, `email`, `dob`, `address`, `profilephoto`) VALUES ('{$user['username']}', '{$user['userid']}', '{$user['password']}', '', '{$user['gender']}', '{$user['email']}', '{$user['dob']}', '{$user['address']}', '')";
-  //   $result=mysqli_query($conn,$sql);
-  //   if($result)
-  //   {
-  //       return true;
-  //   }
-  //   else
-  //   {
-  //       return false;
-  //   }
-  // }
+
+
+  function insertUser($user)
+  {
+    $conn=getConnection();
+    $sql="INSERT INTO `admin` (`name`, `username`, `password`, `usertype`, `gender`, `email`, `dob`, `address`, `profilephoto`) VALUES ('{$user['username']}', '{$user['userid']}', '{$user['password']}', '', '{$user['gender']}', '{$user['email']}', '{$user['dob']}', '{$user['address']}', '')";
+    $result=mysqli_query($conn,$sql);
+    if($result)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  }
 
   function editUser($admin)
   { 
@@ -64,6 +66,26 @@
         return false;
     }
   }
+
+  function uploadPhotoAdmin($fileloc,$id)
+  { 
+    echo $fileloc;
+    echo $id;
+    $conn=getConnection();
+    $sql="UPDATE `admin` set imgsrc='{$fileloc}' where username='$id'";
+    $result=mysqli_query($conn,$sql);
+    
+  
+    if($result)
+    {   echo 'db uploaded';
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  }
+
 
   ?>
  
