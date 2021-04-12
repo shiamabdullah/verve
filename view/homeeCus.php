@@ -30,29 +30,28 @@
     </table>
 
     <table width="100%" border="1">   
-        <td height='100px' align="left">
+        <tr height='100px' align="left">
             <h3> Welcome <?php echo $_SESSION['username'] ?></h3> 
-            
-        </td>
-        <td height='100px' align="left">
-        <?php 
-            $products = getAllProduct();
+            <?php 
+            $products = getAllProduct($_SESSION['username']);
             foreach($products as $product){
-                echo "<tr>
-                <td>Name:{$product["name"]}</td>
-                </tr>
-                <tr>
-                    <td>Discription :  {$product["discription"]} </td>
-                </tr>
-                <tr>
-                    <td>Category :  {$product["Category"]} </td>
-                </tr>
-                <tr>
-                    <td>SubCategory :   {$product["subCategory"]} </td><br>
-                </tr>"; 
+                echo "<td>
+                <td>
+                   Name:{$product["name"]}
+              
+                
+                   Discription :  {$product["discription"]}
+                
+                
+                   Category :  {$product["category"]}
+                
+                   SubCategory :   {$product["subCategory"]} 
+                </td>"; 
                 }
                 ?>
-        </td>
+            
+        </tr>
+        
         
     </table>
     
