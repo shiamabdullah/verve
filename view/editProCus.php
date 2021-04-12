@@ -2,7 +2,7 @@
 	session_start();
 	if(isset($_SESSION['flag'])){
         require_once('../model/userModel.php');
-       // $user = $_SESSION['loggedInUser'];
+       // $user=updateUser($_SESSION["username"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,49 +38,46 @@
                         </h3>
                     </legend>
                     <table align="center" height="400px" >
-                    <?php 
-                                $users = updateUser($_SESSION["username"]);
-                                echo "
+                  
                         <tr>
                             <td>Email <br></td>        
                             <td> :
-                            <input type="email" name="email" value=" <?php echo {$user["email"]} ?>">
+                            <input type="email" name="email" value=" <?php echo $user["email"] ?>">
                             </td>
                         </tr>
             
                         <tr>
                             <td>User Name<br></td>
-                            <td>:<input type="text" name="username" value="<?php echo {$user["name"]} ?>" readonly></td>
+                            <td>:<input type="text" name="username" value="<?php echo $users["name"] ?>" readonly/></td>
                         </tr>
                     
                         <!-- <tr>
                             <td>Password</td>        
-                            <td>:<input type="password" name="password" value="<?php echo $user['password'] ?>"><br></td>
+                            <td>:<input type="password" name="password" value="<?php echo $users['password'] ?>"><br></td>
                         </tr>
             
                         <tr >
                             <td>Confirm Password <br></td>
-                            <td>:<input type="password" name="re_password" value="<?php echo $user['password'] ?>"></td>
+                            <td>:<input type="password" name="re_password" value="<?php echo $users['password'] ?>"></td>
                         </tr> -->
 
                         <tr>        
                             <td colspan="2">
                                 <fieldset>
                                     <legend>Date of Birth</legend>
-                                    <input type="date" name="dob" value="<?php echo $user['dob'] ?>">
+                                    <input type="date" name="dob" value="<?php echo $users['dob'] ?>">
                                 </fieldset>
                             </td>
                         </tr> 
                         <tr>
-                            <td><input type="text" name="gender" value="<?php echo $user['gender'] ?>" hidden></td>
+                            <td><input type="text" name="gender" value="<?php echo $users['gender'] ?>" hidden></td>
                         </tr>
                         <tr align="right">
                             <td " height=" 50px">
                                 <input type="submit" name="submit" value="Update Profile">
                                 <input type="reset" name="click" value="reset">
                             </td>
-                        </tr>"
-                    ?>
+                        </tr>
                     </table>
                 </fieldset>
             </form>
