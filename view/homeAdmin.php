@@ -23,7 +23,7 @@
                             <li><a href="viewprofileAdmin.php"> View Profile</a></li>
                             <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
                             <li><a href="changephotoAdmin.php"> Change Profile Picture</a></li>
-                            <li><a href="changepassAdmin.php"> Change Passowrd</a></li>
+                            <li><a href="changepassAdmin.php"> Change Password</a></li>
                         </ul>
                
                     </td>

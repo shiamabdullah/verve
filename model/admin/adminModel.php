@@ -75,7 +75,7 @@
     $sql="UPDATE `admin` set imgsrc='{$fileloc}' where username='$id'";
     $result=mysqli_query($conn,$sql);
     
-  
+    
     if($result)
     {   echo 'db uploaded';
         return true;
@@ -106,6 +106,22 @@
       $sql = "SELECT 'imgsrc' FROM `admin` WHERE `username`='{$id}'";
       $result = mysqli_query($conn, $sql);
       echo $result;
+  }
+
+  function updatePassword($id,$pass)
+  {
+      $conn = getConnection();
+      $sql = "UPDATE `admin` set `password`='{$pass}' where username='$id'";
+      $result = mysqli_query($conn, $sql);
+      echo $result;
+      if($result)
+        {   echo 'password changed';
+            return true;
+        }
+        else
+        {
+            return false;
+        }
   }
 
 

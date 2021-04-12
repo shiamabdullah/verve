@@ -55,7 +55,7 @@
             </ul>
          </td>
         <td align="center">
-        <form method="post" action="../controller/editCheckAdmin.php">
+        <form method="post" action="../controller/changePassCheckAdmin.php">
             <fieldset style="width:80%">
                         <legend>PROFILE </legend>
                         <table cellpadding=8>
@@ -69,38 +69,29 @@
                             <tr>
                             <td>Name<br></td>
                             <td>
-                            <input type="text" name="name" value="<?php echo$user['name']; ?>" />
+                            <input type="text" name="name" value="<?php echo$user['name']; ?>" readonly/>
                             </td>
                             </tr>
                             
                     
                             <tr>
-                            <td>Email<br></td>
-                            <td><input type="email" name="email" value="<?php echo$user['email']; ?>"></td>
+                            <td>Previous Password<br></td>
+                            <td><input type="password" name="previousPassword" value=""></td>
 				            </tr>
-                            </tr>    
 
-                               <tr>
-                                    <td>Address<br></td>
-                                    <td><input type="address" name="address" value="<?php echo$user['address']; ?>"></td>                               </tr>
-                                </tr>
-                                <tr>
-                                    <td>Gender </td>
+                            <tr>
+                            <td>New Password<br></td>
+                            <td><input type="password" name="newPassword" value=""></td>
+				            </tr>
 
-                                    <td>
-                                        <input type="radio" name="gender" value="Male"> Male
-                                        <input type="radio" name="gender" value="Female"> Female
-                                        <input type="radio" name="gender" value="Other"> Other
-                                    </td>
-                                    </tr>
-                                <tr>
-                             <tr>
-                                    <td>Dob<br></td>
-                                    <td> <input type="date" name="dob" value="" /> </td> <td >
-                                  
-                             </tr>
+                            <tr>
+                            <td>Confirm Password<br></td>
+                            <td><input type="password" name="confirmPassword" value=""></td>
+				            </tr>
 
-                        <tr>
+                            
+                           
+                        
                         <td>
                         </td>
                        <td>

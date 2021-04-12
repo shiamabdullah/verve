@@ -32,23 +32,25 @@
     </table>
     
     <table width="100%"  border='1' >
-    <thead>
+    <!-- <thead>
                     <th>
 						<center>
-						Account
+						<h2>Account</h2>
 						</center>
                     </th>
                     
                     
                     <th>
                     <center>
-						 View Profile
+						<h2>View Profile</h2> 
 						</center>
                     </th>
-    </thead>
+    </thead> -->
 
     <tbody>
-        <td>
+    
+    <fieldset>
+    <td>
             <ul>
                 <li><a href="viewprofileAdmin.php"> View Profile</a></li>
                 <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
@@ -56,6 +58,8 @@
                 <li><a href="changepassAdmin.php"> Change Passowrd</a></li>
             </ul>
          </td>
+    </fieldset>
+    
 
         <td align="center">
             <fieldset style="width:80%">
