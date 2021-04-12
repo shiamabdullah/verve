@@ -1,10 +1,10 @@
 <?php
   require_once('db.php');
   
-  function validationUser($username,$password)
+  function validateUser($username,$password)
   {
         $conn= $conn=getConnection();
-        $sql = "select * from user where name='{$username}' and password='{$password}'";
+        $sql = "select * from admin where username='{$username}' and password='{$password}'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($result);
 
@@ -32,21 +32,16 @@
     }
   }
 
-  function getUserInformation($username)
+  
+  function getUserbyId($id)
   {
-		$conn = getConnection();
-		$sql = "SELECT * FROM `user` WHERE `name`='{$username}'";
-		
-        $result = mysqli_query($conn, $sql);
-		$user = [];
-
-		while($row = mysqli_fetch_assoc($result)){
-			array_push($user, $row);
-		}
-
-		return $user;
-	}
+      $conn = getConnection();
+      $sql = "SELECT * FROM `admin` WHERE `username`='{$id}'";
+      $result = mysqli_query($conn, $sql);
+      $row = mysqli_fetch_assoc($result);
     
+      return $row;
+  }
 
 ?>
  

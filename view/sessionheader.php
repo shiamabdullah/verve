@@ -16,14 +16,14 @@ if (session_status() == PHP_SESSION_NONE) {
 			<img src="../model/media/logo.jpg" height="60px">
 		</th>
 		<th align="center" width="50px">
-			<?php     $uid= $_SESSION['current_user']['userid']; $img_name= $uid.".png"; ?>
+			<?php     $uid= $_SESSION['current_user']['username']; $img_name= $uid.".png"; ?>
 			<img src="../Assets/Adminphotos/<?php echo"$img_name"; ?>" height="200px">
 
 		</th>
 		<th align="Right" width="30%">
                             <h3>
 								<a href="../view/homeAdmin.php" >Home</a> |
-								<?php echo $_SESSION['current_user']['userid']; ?> | 
+								<?php echo $_SESSION['current_user']['username']; ?> | 
                                 <a href="../controller/logout.php" >Signout</a>
                             </h3>
                             

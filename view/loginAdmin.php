@@ -3,11 +3,11 @@
 	include('header.php');
 
 ?>
-
+<link rel="stylesheet" href="cssadmin/styles.css"/>
 <form method="post" action="../controller/logCheckAdmin.php">
 
 		<fieldset >
-			<table align="center" >
+			<table align="center"  cellpadding="10" >
 			<legend>LOGIN</legend>
 				<tr>
 					<td>Username</td>

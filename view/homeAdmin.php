@@ -2,6 +2,8 @@
 	$title='Home';
 	include('sessionheader.php');
 ?>
+<link rel="stylesheet" href="cssadmin/styles.css"/>
+
 	<table  width="100%" align="center" border='1'>    
 				<tr>
 					<center>
