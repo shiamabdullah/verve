@@ -4,7 +4,7 @@
     $user= $_SESSION['current_user'];
     
     //image 
-    $uid= $_SESSION['current_user']['userid']; 
+    $uid= $_SESSION['current_user']['name']; 
     $img_name="../Assets/AdminPhotos/".$uid.".png";
     $img="";
 
@@ -16,6 +16,8 @@
     }
     
 ?>
+<link rel="stylesheet" href="cssadmin/styles.css"/>
+
 	<table width="100%" align="center">    
 				<tr>
 					<center>
@@ -52,35 +54,59 @@
                 <li><a href="changepassAdmin.php"> Change Passowrd</a></li>
             </ul>
          </td>
-
         <td align="center">
-        <form method="post" action="../controller/regCheckAdmin.php">
+        <form method="post" action="../controller/editCheckAdmin.php">
             <fieldset style="width:80%">
                         <legend>PROFILE </legend>
-                        <table >
+                        <table cellpadding=8>
+                            <tr>
+                            <td>User Name<br></td>
+                            <td>
+                                <input type="text" name="username" value="<?php echo$user['username'];?>" readonly/>
+                            </td>
+                            </tr>
+
                             <tr>
                             <td>Name<br></td>
                             <td>
-                            <input type="text" name="name" value="" />
+                            <input type="text" name="name" value="<?php echo$user['name']; ?>" />
                             </td>
-            
+                            </tr>
+                            
+                    
                             <tr>
                             <td>Email<br></td>
-                            <td><input type="email" name="email" value=""></td>
+                            <td><input type="email" name="email" value="<?php echo$user['email']; ?>"></td>
 				            </tr>
                             </tr>    
 
                                <tr>
                                     <td>Address<br></td>
-                                    <td><input type="address" name="address" value=""></td>                               </tr>
-                                
+                                    <td><input type="address" name="address" value="<?php echo$user['address']; ?>"></td>                               </tr>
+                                </tr>
+                                <tr>
+                                    <td>Gender </td>
+
+                                    <td>
+                                        <input type="radio" name="gender" value="Male"> Male
+                                        <input type="radio" name="gender" value="Female"> Female
+                                        <input type="radio" name="gender" value="Other"> Other
+                                    </td>
+                                    </tr>
+                                <tr>
                              <tr>
                                     <td>Dob<br></td>
                                     <td> <input type="date" name="dob" value="" /> </td> <td >
                                   
                              </tr>
 
-
+                        <tr>
+                        <td>
+                        </td>
+                       <td>
+                       <input type="submit" name="change" value="Change"> 
+                       </td> 
+                        </tr>
                         </table>
             </fieldset>
         </form>

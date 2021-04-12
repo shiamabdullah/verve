@@ -1,4 +1,6 @@
 <?php
+require_once('../model/admin/adminModel.php');
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }	if(!isset($_SESSION['flag'])){
@@ -16,8 +18,8 @@ if (session_status() == PHP_SESSION_NONE) {
 			<img src="../model/media/logo.jpg" height="60px">
 		</th>
 		<th align="center" width="50px">
-			<?php     $uid= $_SESSION['current_user']['username']; $img_name= $uid.".png"; ?>
-			<img src="../Assets/Adminphotos/<?php echo"$img_name"; ?>" height="200px">
+			
+			<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?>" height="200px">
 
 		</th>
 		<th align="Right" width="30%">
@@ -32,3 +34,4 @@ if (session_status() == PHP_SESSION_NONE) {
 
 </head>
 <body>
+

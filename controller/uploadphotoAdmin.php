@@ -1,17 +1,18 @@
 <?php 
+require_once('../model/admin/adminModel.php');
 session_start();
  if (isset($_POST['submit']))
  {            
-     
-    $uid= $_SESSION['current_user']['userid'];
+     //print_r( $_SESSION['current_user']);
+    $uid=  $_SESSION['current_user']['username'];
 
      $file_name= $_FILES['file']['name'];
      $file_type= $_FILES['file']['type'];
      $file_size= $_FILES['file']['size'];
      $file_tem_loc= $_FILES['file']['tmp_name'];
+     $target_file = '../Assets/AdminPhotos/' . basename($uid."_".$file_name);
+     //$target_file = '../Assets/AdminPhotos/' . basename($uid.".png");
 
-     $target_file = '../Assets/AdminPhotos/' . basename($uid.".png");
-    
      if (empty($file_name) or empty($file_type) or empty($file_size) or empty($file_tem_loc)  ){
         echo "null";
      }
@@ -31,7 +32,9 @@ session_start();
     {       
          move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
          echo "uploaded";
-         header('location: ../view/homeAdmin.php');
+         //echo $target_file;
+        uploadPhotoAdmin($target_file,$uid);
+        header('location: ../view/changePhotoAdmin.php');
          
     }
    else {

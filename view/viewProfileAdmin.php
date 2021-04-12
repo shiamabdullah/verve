@@ -3,9 +3,11 @@
 	include('sessionheader.php');
     $user= $_SESSION['current_user'];
     
+    $userdb=getUserbyId($_SESSION['current_user']['username']);
+
     //image 
-    $uid= $_SESSION['current_user']['userid']; 
-    $img_name="../Assets/AdminPhotos/".$uid.".png";
+    $username= $_SESSION['current_user']['username']; 
+    $img_name=$userdb['imgsrc'];
     $img="";
 
     if(file_exists($img_name)){
@@ -16,6 +18,8 @@
     }
     
 ?>
+<link rel="stylesheet" href="cssadmin/styles.css"/>
+
 	<table width="100%" align="center">    
 				<tr>
 					<center>
@@ -27,7 +31,7 @@
 				</tr>
     </table>
     
-    <table width="100%"  border='1'>
+    <table width="100%"  border='1' >
     <thead>
                     <th>
 						<center>
@@ -56,10 +60,10 @@
         <td align="center">
             <fieldset style="width:80%">
                         <legend>PROFILE </legend>
-                        <table >
+                        <table cellpadding=8>
                             <tr>
                                 <td>Name<br></td>
-                                <td >: <?php echo $user['username']; ?></td>
+                                <td >: <?php echo $user['name']; ?></td>
                                 <td rowspan="5" width="40px">
 
                                 </td>
@@ -74,7 +78,7 @@
                                 
                                <tr>
                                     <td>Username<br></td>
-                                    <td>: <?php echo $user['userid']; ?></td>
+                                    <td>: <?php echo $user['username']; ?></td>
                                </tr>
                                <tr>
                                     <td>Address<br></td>
@@ -89,6 +93,7 @@
 
 
                         </table>
+                        </td>
             </fieldset>
                
                 

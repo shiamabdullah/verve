@@ -36,7 +36,7 @@
   {
 		$conn = getConnection();
 		$sql = "SELECT * FROM `user` WHERE `name`='{$username}'";
-        $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
 		$user = [];
 
 		while($row = mysqli_fetch_assoc($result)){
