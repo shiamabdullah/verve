@@ -9,7 +9,8 @@
         $subCategory = trim($_POST['subCategory']," ");  // Storing Selected Value In Variable
         $description = $_POST['description'];
         $buyingPrice = trim($_POST['buyingPrice']," ");  // Storing Selected Value In Variable
-        $sellingPrice = trim($_POST['buyingPrice']," ");  // Storing Selected Value In Variable
+        $sellingPrice = trim($_POST['sellingPrice']," ");  // Storing Selected Value In Variable
+        $stock = trim($_POST['stock']," ");  // Storing Selected Value In Variable
         $displayable = trim($_POST['displayable']," ");  // Storing Selected Value In Variable
         $displayable = trim($_POST['displayable']," ");  // Storing Selected Value In Variable
         
@@ -20,8 +21,13 @@
         $file_tem_loc= $_FILES['file']['tmp_name'];
 
         $target_file = '../Assets/ProductPhotos/' . basename($productName."_".$file_name);
+       
+        $product = ['productName'=> $productName,'category'=> $category, 'subCategory'=> $subCategory, 
+        'description'=>$description, 'buyingPrice'=>$buyingPrice, 'sellingPrice'=>$sellingPrice,
+        'stock'=>$stock,'displayable'=>$displayable, 'photo1'=>$target_file];
+
         if (empty($file_name) or empty($file_type) or empty($file_size) or empty($file_tem_loc)  ){
-            echo "null";
+            echo "Must Upload Atleast one photo";
          }
      
          else if ( ( strpos($file_type, 'jpeg')!== false or str_contains($file_type, 'png') or str_contains($file_type, 'jpg'))!=true )
@@ -43,13 +49,30 @@
         }
         else{
             echo $target_file;
+            if (is_uploaded_file($_FILES['file']['tmp_name']))
+            {       
+                move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
+                echo "uploaded";
+                //echo $target_file;
+                $status=insertProduct($product);
+                if($status)
+                    {
+                        echo "added";
+                        
+                    }
+                    else
+                    {
+                        echo "Error";
+                    }
+            }
+                
             
-            $product = ['productName'=> $productName,'category'=> $category, 'subCategory'=> $subCategory, 
-                        'description'=>$description, 'buyingPrice'=>$buyingPrice, 'sellingPrice'=>$sellingPrice,
-                        'displayable'=>$displayable, 'photo1'=>$target_file];
+        else {
+        echo "not stored in server";  }  
+
+        }    
             
-            insertProduct($product);
-        }
+           
             
         
 

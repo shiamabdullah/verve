@@ -4,7 +4,7 @@ include('sessionheader.php');
 
 ?>
 
-<form method="post" action="../controller/addProductCheck.php" enctype="multipart/form-data">
+<form method="post" action="../controller/addProductCheckAdmin.php" enctype="multipart/form-data">
 		<fieldset>
 			<center><legend>Add Product</legend></center>
 			<table cellpadding=8 align="center">
@@ -12,7 +12,7 @@ include('sessionheader.php');
                 <tr>
                     <td>Name<br></td>
                     <td>
-                        <input type="text" name="productName" value="" >
+                        <input type="text" name="productName" value="" required>
                     </td>
                 </tr>
 
@@ -41,21 +41,27 @@ include('sessionheader.php');
                 <tr>
                     <td>Description<br></td>
                     <td 
-					<td> <textarea rows="6" cols="25" <input type="text" name="description" value="" placeholder= "Enter your description"></textarea>
+					<td> <textarea rows="6" cols="25" <input type="text" name="description" value="" placeholder= "Enter your description" required></textarea>
                     </td>
                 </tr>
 
                 <tr>
                     <td>Buying Price<br></td>
                     <td>
-                        <input type="text" name="buyingPrice" value="">
+                        <input type="text" name="buyingPrice" value="" required>
                     </td>
                 </tr>
 
                 <tr>
                     <td>Selling Price<br></td>
                     <td>
-                        <input type="text" name="sellingPrice" value="">
+                        <input type="text" name="sellingPrice" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stock<br></td>
+                    <td>
+                        <input type="text" name="stock" value="" required>
                     </td>
                 </tr>
 

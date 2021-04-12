@@ -44,7 +44,7 @@
 						<h3> Products</h3>
 						</center>
                         <ul>
-                            <li><a href="addProduct.php"> Add Product</a></li>
+                            <li><a href="addProductAdmin.php"> Add Product</a></li>
                             <li><a href="viewProductList.php"> View Product</a></li>
                             
                         </ul>

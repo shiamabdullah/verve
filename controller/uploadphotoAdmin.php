@@ -12,7 +12,7 @@ session_start();
      $file_tem_loc= $_FILES['file']['tmp_name'];
      $target_file = '../Assets/AdminPhotos/' . basename($uid."_".$file_name);
      //$target_file = '../Assets/AdminPhotos/' . basename($uid.".png");
-
+    
      if (empty($file_name) or empty($file_type) or empty($file_size) or empty($file_tem_loc)  ){
         echo "null";
      }

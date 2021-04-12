@@ -73,6 +73,7 @@
 				// 		file_put_contents($file_name, $jsonData);
 				// }
 				$status=insertUser($user);
+				echo $status;
                 if($status)
                 {
                     header('location: ../view/loginAdmin.php');
