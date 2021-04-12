@@ -1,20 +1,21 @@
 <?php
 
+require_once('../model/admin/adminModel.php');
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
 
-// $user = array(array('username'=> "s", 'password'=> "dd", 'email'=>"ss")) ;
-// $json = json_encode($user);
-// var_dump($user);
-// $myfile = fopen('../model/admin.json', "w");
-// fwrite($myfile, $json);
-// fclose($myfile);
+     $user=getUserbyId($_SESSION['current_user']['username']);
+     print_r($user);
+     echo $user['imgsrc'];
 
-// $myfile = fopen('../model/admin.json', "r");
-    $file_name='../model/admin.json';
-    $myfile = fopen($file_name, "r");
-		$data = fread($myfile, filesize($file_name));
-		$user = json_decode($data, true);
-    var_dump($user);
-    
     
 ?>
+<?php 
+//echo $_SESSION['current_user']['imgsrc'];
+ ?>
+<html>
+  
+   <img src= "<?php echo $user['imgsrc'];?>"></html>
 
+<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?>
