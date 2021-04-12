@@ -3,9 +3,11 @@
 	include('sessionheader.php');
     $user= $_SESSION['current_user'];
     
+    $userdb=getUserbyId($_SESSION['current_user']['username']);
+
     //image 
     $username= $_SESSION['current_user']['username']; 
-    $img_name="../Assets/AdminPhotos/".$uid.".png";
+    $img_name=$userdb['imgsrc'];
     $img="";
 
     if(file_exists($img_name)){

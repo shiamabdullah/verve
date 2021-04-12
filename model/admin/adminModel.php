@@ -86,6 +86,28 @@
     }
   }
 
+  function getUserInformation($username)
+  {
+		$conn = getConnection();
+		$sql = "SELECT * FROM `user` WHERE `name`='{$username}'";
+    $result = mysqli_query($conn, $sql);
+		$user = [];
+
+		while($row = mysqli_fetch_assoc($result)){
+			array_push($user, $row);
+		}
+
+		return $user;
+	}
+
+  function fetchImage($id)
+  {
+      $conn = getConnection();
+      $sql = "SELECT 'imgsrc' FROM `admin` WHERE `username`='{$id}'";
+      $result = mysqli_query($conn, $sql);
+      echo $result;
+  }
+
 
   ?>
  

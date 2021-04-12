@@ -34,7 +34,7 @@ session_start();
          echo "uploaded";
          //echo $target_file;
         uploadPhotoAdmin($target_file,$uid);
-         //header('location: ../view/homeAdmin.php');
+        header('location: ../view/changePhotoAdmin.php');
          
     }
    else {
