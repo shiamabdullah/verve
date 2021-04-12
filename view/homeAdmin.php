@@ -12,7 +12,7 @@
 					
 				</tr>  
 				<tr>
-				<h2> Welcome,  <?php echo $_SESSION['current_user']['username']; ?> </h2> 
+				<h2> Welcome,  <?php echo $_SESSION['current_user']['name']; ?> </h2> 
 				</tr>
                 <tr>
                     <td >
