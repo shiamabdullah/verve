@@ -1,7 +1,8 @@
 <?php
 	session_start();
 	if(isset($_SESSION['flag'])){
-        $user = $_SESSION['loggedInUser'];
+        require_once('../model/userModel.php');
+       // $user = $_SESSION['loggedInUser'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,17 +38,22 @@
                         </h3>
                     </legend>
                     <table align="center" height="400px" >
+                    <?php 
+                                $users = updateUser($_SESSION["username"]);
+                                echo "
                         <tr>
                             <td>Email <br></td>        
-                            <td> :<input type="email" name="email" value="<?php echo $user['email'] ?>"> </td>
+                            <td> :
+                            <input type="email" name="email" value=" <?php echo {$user["email"]} ?>">
+                            </td>
                         </tr>
             
                         <tr>
                             <td>User Name<br></td>
-                            <td>:<input type="text" name="username" value="<?php echo $user['username'] ?>" readonly></td>
+                            <td>:<input type="text" name="username" value="<?php echo {$user["name"]} ?>" readonly></td>
                         </tr>
                     
-                        <tr>
+                        <!-- <tr>
                             <td>Password</td>        
                             <td>:<input type="password" name="password" value="<?php echo $user['password'] ?>"><br></td>
                         </tr>
@@ -55,7 +61,7 @@
                         <tr >
                             <td>Confirm Password <br></td>
                             <td>:<input type="password" name="re_password" value="<?php echo $user['password'] ?>"></td>
-                        </tr>
+                        </tr> -->
 
                         <tr>        
                             <td colspan="2">
@@ -73,7 +79,8 @@
                                 <input type="submit" name="submit" value="Update Profile">
                                 <input type="reset" name="click" value="reset">
                             </td>
-                        </tr>
+                        </tr>"
+                    ?>
                     </table>
                 </fieldset>
             </form>

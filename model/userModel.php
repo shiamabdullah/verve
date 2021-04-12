@@ -36,7 +36,6 @@
   {
 		$conn = getConnection();
 		$sql = "SELECT * FROM `user` WHERE `name`='{$username}'";
-		
         $result = mysqli_query($conn, $sql);
 		$user = [];
 
@@ -47,6 +46,19 @@
 		return $user;
 	}
     
+
+
+    function updateUser($user){
+		$conn = getConnection();
+		$sql = "update user set name='{$user['username']}', email='{$user['email']}',  gender='{$user['gender']}', dob='{$user['dob']}'";
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+
 
 ?>
  
