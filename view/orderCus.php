@@ -31,9 +31,54 @@
             <form method="post" action="../controller/logcheckCus.php">               
                 <fieldset style="width:320px">
                     <legend height>Order History</legend>
-                    <table height="200px">
+                    <table height="350px">
                         <tr>
-
+                        <td>Order No</td>
+			            <td>Date</td>
+			            <td>Price</td>
+                        </tr>
+                        <tr>
+                        <td>1</td>
+                        <td>23.02.2021</td>
+                        <td>650.00</td>
+                        <td>
+                        
+                        <a href="delete.php?id=1"> DELETE</a>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>2</td>
+                        <td>21.04.2021</td>
+                        <td>1050.69</td>
+                        <td>
+                        
+                        <a href="delete.php?id=1"> DELETE</a>
+                        </td>
+                        </tr><tr>
+                        <td>3</td>
+                        <td>29.03.2021</td>
+                        <td>765.25</td>
+                        <td>
+                        
+                        <a href="delete.php?id=1"> DELETE</a>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>4</td>
+                        <td>12.04.2021</td>
+                        <td>150.00</td>
+                        <td>
+                        
+                        <a href="delete.php?id=1"> DELETE</a>
+                        </td>
+                        </tr><tr>
+                        <td>5</td>
+                        <td>12.04.2021</td>
+                        <td>720.00</td>
+                        <td>
+                       
+                        <a href="delete.php?id=1"> DELETE</a>
+                        </td>
                         </tr>
                     </table>
                 </fieldset>
