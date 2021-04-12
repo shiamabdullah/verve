@@ -4,7 +4,7 @@
 ?>
 <link rel="stylesheet" href="cssadmin/styles.css"/>
 
-	<table  width="100%" align="center" border='1'>    
+	<table  width=100% align="center" border='1'>    
 				<tr>
 					<center>
 					<h1>Admin Panel</h1>
