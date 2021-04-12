@@ -31,7 +31,7 @@
             <form method="post" action="../controller/logcheckCus.php">               
                 <fieldset style="width:320px">
                     <legend height>My WishList</legend>
-                    <table height="350px">
+                    <table height="300px">
                     <tr>
                     <td><b>Product</b></td>
 			        <td><b>Price</b></td>

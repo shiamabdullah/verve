@@ -29,7 +29,7 @@
         <td align="center">
             
             <form method="post" action="../controller/logcheckCus.php">               
-                <fieldset style="width:320px">
+                <fieldset style="width:300px">
                     <legend height>Order History</legend>
                     <table height="350px">
                         <tr>
