@@ -27,7 +27,7 @@
 
 				<tr>
 					<td>
-						<input type="submit" name="submit" value="Submit"> 
+						<input class="btn btn-success" type="submit" name="submit" value="Submit"> 
 						<a href="signup.php">Signup</a>
 					</td>
 				</tr>

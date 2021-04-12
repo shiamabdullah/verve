@@ -48,7 +48,7 @@
 				$status=editUser($user);
                 if($status)
                 {
-                    //header('location: ../view/viewProfileAdmin.php');
+                    header('location: ../view/viewProfileAdmin.php');
 
                 }
                 else
