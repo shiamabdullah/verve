@@ -7,7 +7,7 @@
 <form method="post" action="../controller/logCheckAdmin.php">
 
 		<fieldset >
-			<table align="center">
+			<table align="center" >
 			<legend>LOGIN</legend>
 				<tr>
 					<td>Username</td>

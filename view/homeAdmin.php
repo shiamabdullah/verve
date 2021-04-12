@@ -2,7 +2,7 @@
 	$title='Home';
 	include('sessionheader.php');
 ?>
-	<table width="100%" align="center" border='1'>    
+	<table  width="100%" align="center" border='1'>    
 				<tr>
 					<center>
 					<h1>Admin Panel</h1>
