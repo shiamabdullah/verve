@@ -3,12 +3,10 @@
   
   function validationUser($username,$password)
   {
-    $conn= $conn=getConnection();
+     $conn=getConnection();
     $sql = "select * from user where name='{$username}' and password='{$password}'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($result);
-
-
     if(count($row) > 0){
 		return true;
 	}else{
@@ -50,8 +48,9 @@
 
     function updateUser($user){
       $conn = getConnection();
-      $sql = "update user set name='{$user['username']}', email='{$user['email']}',  gender='{$user['gender']}', dob='{$user['dob']}'";
-      if(mysqli_query($conn, $sql)){
+      $sql = "update user set name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}'";;
+      $result=mysqli_query($conn, $sql);
+      if($result){
         return true;
       }else{
         return false;

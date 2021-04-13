@@ -2,13 +2,24 @@
   
   session_start();
   require_once('../model/userModel.php');
-
-   if(isset($_POST['submit']))
-   {
-
+  
+  if(!empty($_POST["remember"])) 
+  {
     $username = $_POST['username'];
     $password  = $_POST['password'];
+	setcookie ("username",$username,time()+60*60*7);
+	setcookie ("password",$password,time()+60*60*7);
+  } 
+  else 
+  {
+	setcookie("username","");
+	setcookie("password","");
+  }  
 
+   if(isset($_POST['submit']))
+   { 
+    $username = $_POST['username'];
+    $password  = $_POST['password'];
     if($username == "" || $password == "")
     {
         echo "null input...";
