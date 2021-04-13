@@ -17,7 +17,7 @@ table, th, td {
 	<center>
         <h1>User list</h1>
     </center>
-	<table border="2" align="center" cellpadding="10" width="auto">
+	<table border="2" align="center" cellpadding="10" width="50%">
         <tr>
 			<td>ID</td>
 			<td>NAME</td>

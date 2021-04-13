@@ -24,7 +24,7 @@
                 echo "name must be atleast 2 char\n";
 
             }
-			 if(ctype_alnum($username)){
+			 if(!(ctype_alnum($username))){
                 echo "name can only contain alphanumeric\n";
 
             }
@@ -46,7 +46,7 @@
 				echo "password & confirm password mismatch...";
 			}
 
-			else if(strlen($address)>30){
+			else if(strlen($address)>100){
 				echo "address must be less than 30 char";
 
 			}
