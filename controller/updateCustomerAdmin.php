@@ -12,7 +12,7 @@ $conn = getConnection();
         $result = mysqli_query($conn, $sql);
         if ($result=1){
             echo "updated <br>";
-        echo    " <a href=\"../view/user_list.php\"> View Updated list </a> "; }
+        echo    " <a href=\"../view/editUsersAdmin.php\"> View Updated list </a> "; }
     }
 
 ?>
