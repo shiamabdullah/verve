@@ -19,5 +19,13 @@
     }
   }
 
+  function fetchProductImage($id)
+  {
+      $conn = getConnection();
+      $sql = "SELECT 'photo1' FROM `products` WHERE `pid`='{$id}'";
+      $result = mysqli_query($conn, $sql);
+      echo $result;
+  }
+
   ?>
  
