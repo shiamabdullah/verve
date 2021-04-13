@@ -1,5 +1,6 @@
 <?php ;
 	require_once('../model/admin/productModel.php');
+    $conn = getConnection();
 
 	if(isset($_POST['submit'])){
 

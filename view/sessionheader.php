@@ -23,7 +23,6 @@ if (session_status() == PHP_SESSION_NONE) {
 		<td align="center" width="40px">
 			
 			<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?>" height="200px">
-
 		</td>
 		<td align="Right" width="30%">
                             <h3>

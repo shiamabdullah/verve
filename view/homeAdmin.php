@@ -33,7 +33,8 @@
 						<h3> User Accounts</h3>
 						</center>
                         <ul>
-                            <li><a href="viewUsers.php"> View Users</a></li>
+                            <li><a href="viewUsersAdmin.php"> View Users</a></li>
+                            <li><a href="editUsersAdmin.php"> Edit Users</a></li>
                             
                         </ul>
                

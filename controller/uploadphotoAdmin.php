@@ -3,7 +3,6 @@ require_once('../model/admin/adminModel.php');
 session_start();
  if (isset($_POST['submit']))
  {            
-     //print_r( $_SESSION['current_user']);
     $uid=  $_SESSION['current_user']['username'];
 
      $file_name= $_FILES['file']['name'];
@@ -34,7 +33,7 @@ session_start();
          echo "uploaded";
          //echo $target_file;
         uploadPhotoAdmin($target_file,$uid);
-        header('location: ../view/changePhotoAdmin.php');
+        header('location: ../view/viewProfileAdmin.php');
          
     }
    else {
