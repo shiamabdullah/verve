@@ -35,6 +35,8 @@
                         <ul>
                             <li><a href="viewUsersAdmin.php"> View Users</a></li>
                             <li><a href="editUsersAdmin.php"> Edit Users</a></li>
+                            <li><a href="viewEmployeesAdmin.php"> View Employees</a></li>
+                            <li><a href="editEmployeesAdmin.php"> Edit Employees</a></li>
                             
                         </ul>
                

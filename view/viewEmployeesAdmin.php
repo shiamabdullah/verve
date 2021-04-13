@@ -15,16 +15,16 @@ table, th, td {
 </style>
 	
 	<center>
-        <h1>User list</h1>
+        <h1>Employee list</h1>
     </center>
 	<table border="2" align="center" cellpadding="10" width="auto">
         <tr>
 			<td>ID</td>
 			<td>NAME</td>
 			<td>EMAIL</td>
-			<td>GENDER</td>
+			<td>SALARY</td>
 		</tr>
-        <?php $sql = "select * from user";
+        <?php $sql = "select * from users";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
 		
@@ -32,9 +32,9 @@ table, th, td {
 
             echo 	"<tr>
                         <td>{$row['id']}</td>
-                        <td>{$row['name']}</td>
+                        <td>{$row['username']}</td>
                         <td>{$row['email']}</td>
-                        <td>{$row['gender']}</td>
+                        <td>{$row['salary']}</td>
                         
                     </tr>";
         }
