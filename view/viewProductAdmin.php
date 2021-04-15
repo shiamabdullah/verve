@@ -19,8 +19,9 @@ table, th, td {
 	<center>
         <h2>View Products</h2>
     </center>
-	<table border="2" align="center" cellpadding="10" width="auto">
-        <tr>
+	<table class="data-table" border="2" align="center" cellpadding="10" width="auto">
+  <thead>
+  <tr>
 			<td>ID</td>
 			<td>NAME</td>
             <td>Category</td>
@@ -35,7 +36,8 @@ table, th, td {
             <td>img3 </td>
 
 		</tr>
-
+    </thead>      
+    <tbody>
         <?php $sql = "select * from products";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
@@ -57,7 +59,7 @@ table, th, td {
               </tr>	
             <?php
             }
-            ?>
+            ?></tbody>
             
             </table>
 

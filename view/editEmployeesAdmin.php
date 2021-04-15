@@ -38,7 +38,7 @@ $conn = getConnection();
                         <td>{$row['salary']}</td>
                         <td>
                         <a class=\"btn btn-success\" href=\"editEmployeeAdmin.php?id={$row['id']}\" role=\"button\">Edit</a>
-                        <a class=\"btn btn-success\" href=\"../controller/deleteCustomerAdmin.php?id={$row['id']}\" role=\"button\">Delete</a>
+                        <a class=\"btn btn-success\" href=\"../controller/deleteEmployeeAdmin.php?id={$row['id']}\" role=\"button\">Delete</a>
 
                        
                         </td>

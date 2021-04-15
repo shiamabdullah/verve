@@ -112,7 +112,7 @@ img {
 
                 </td>
                 <td>
-                    <?php echo "<a class=\"btn btn-success\" href=\"viewProductAdmin.php\" role=\"button\">Edit</a>";
+                    <?php echo "<a class=\"btn btn-success\" href=\"viewProductAdmin.php\" role=\"button\">View All Products</a>";
                      ?>                     
                 </td>
 				</tr>
