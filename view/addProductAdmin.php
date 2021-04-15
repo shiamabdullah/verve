@@ -90,7 +90,7 @@ include('sessionheader.php');
                     photo 2:
                     </td>
                     <td>
-                     <input class="btn btn-success" type="file" name="file2" id="file">
+                     <input class="btn btn-success" type="file" name="file2" id="file2">
                     </td>
                     </tr>
 
