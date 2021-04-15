@@ -17,14 +17,19 @@ table, th, td {
 	<center>
         <h1>Employee list</h1>
     </center>
-	<table border="2" align="center" cellpadding="10" width="40%">
-        <tr>
+	<table class="data-table"  border="2" align="center" cellpadding="10" width="50%">
+    <thead>
+    <tr>
 			<td>ID</td>
 			<td>NAME</td>
 			<td>EMAIL</td>
+			<td>DESIGNATION</td>
 			<td>SALARY</td>
 		</tr>
-        <?php $sql = "select * from users";
+        </thead>    
+<tbody>
+
+        <?php $sql = "select * from employee ORDER BY id";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
 		
@@ -34,11 +39,14 @@ table, th, td {
                         <td>{$row['id']}</td>
                         <td>{$row['username']}</td>
                         <td>{$row['email']}</td>
+                        <td>{$row['designation']}</td>
                         <td>{$row['salary']}</td>
                         
                     </tr>";
         }
     ?>
+    </tbody>
+
     </table>
 
 

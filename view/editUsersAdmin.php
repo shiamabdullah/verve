@@ -11,13 +11,16 @@ $conn = getConnection();
 	<center>
         <h1>User list</h1>
     </center>
-	<table border="1" align="center" cellpadding="10" width=50%>
-        <tr>
+	<table class="data-table" align="center" cellpadding="8" width=50% >
+    <thead>   
+    <tr>
 			<td>ID</td>
 			<td>NAME</td>
 			<td>EMAIL</td>
 			<td>ACTION</td>
 		</tr>
+        </thead>
+        <tbody>
         <?php $sql = "select * from user";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
@@ -29,12 +32,13 @@ $conn = getConnection();
                         <td>{$row['name']}</td>
                         <td>{$row['email']}</td>
                         <td>
-                        <a href=\"editUserAdmin.php?id={$row['id']}\"> EDIT </a> |
-                        <a href=\"../controller/deleteCustomerAdmin.php?id={$row['id']}\"> DELETE </a>
+                        <a class=\"btn btn-success\" href=\"editUserAdmin.php?id={$row['id']}\" role=\"button\">Edit</a>
+                        <a class=\"btn btn-success\" href=\"../controller/deleteCustomerAdmin.php?id={$row['id']}\" role=\"button\">Delete</a>
                         </td>
                     </tr>";
         }
     ?>
+    </tbody>
     </table>
 
 
