@@ -64,4 +64,9 @@ ul.a {
 .data-table tbody tr:last-of-type{
     border-bottom: 4px solid aquamarine;
 }
-
+ul{
+    color: aqua;
+    text-shadow:#eef2f3;
+    text-emphasis-color: green;
+    
+}
