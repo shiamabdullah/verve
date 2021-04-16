@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 body{
+    font-family: Poppins;
     background: #8e9eab;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -19,4 +21,52 @@ fieldset{
     font-size: 16px;
 
 }
+.data-entry{
+    width:30%;
+    background-image: linear-gradient( 89.2deg,  rgba(191,241,236,1) 22.3%, rgba(109,192,236,1) 84.1% );
+    align-self: center;
+    margin: 0 auto;
+    color: green;
+    border-collapse: collapse;
+    font-size: 16px;
+}
 
+ul.a {
+    list-style-type: circle;
+  }
+
+.data-table{
+    border-collapse:collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+
+}
+.data-table thead tr{
+    background-color: aquamarine;
+    font-weight: bold;
+    min-width: 400px;
+    border-radius: 15px 50px 30px 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0 ,0, 0, 0.15);
+}
+.data-table thead td{
+    padding: 12px 15px;
+}
+
+.data-table tbody tr{
+   border-bottom: 1px solid #ddd;
+}
+
+.data-table tbody tr:nth-of-type(even){
+    background-color:#f3f3f3;
+
+}
+.data-table tbody tr:last-of-type{
+    border-bottom: 4px solid aquamarine;
+}
+ul{
+    color: aqua;
+    text-shadow:#eef2f3;
+    text-emphasis-color: green;
+    
+}

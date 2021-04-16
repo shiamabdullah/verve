@@ -2,7 +2,6 @@
 	$title='Home';
 	include('sessionheader.php');
 ?>
-<link rel="stylesheet" href="cssadmin/styles.css"/>
 
 	<table  width=100% align="center" border='1'>    
 				<tr>
@@ -17,14 +16,17 @@
                 <tr>
                     <td >
 						<center>
-						<h3>Account</h3>
-						</center>
-                        <ul>
-                            <li><a href="viewprofileAdmin.php"> View Profile</a></li>
-                            <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
-                            <li><a href="changephotoAdmin.php"> Change Profile Picture</a></li>
-                            <li><a href="changepassAdmin.php"> Change Password</a></li>
-                        </ul>
+					<div class="list box">
+                            <h3>Account</h3>
+                            </center>
+                                           <ul>
+                                               
+                                               <li><a href="viewprofileAdmin.php"> View Profile</a></li>
+                                               <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
+                                               <li><a href="changephotoAdmin.php"> Change Profile Picture</a></li>
+                                               <li><a href="changepassAdmin.php"> Change Password</a></li>
+                                           </ul>
+                    </div >
                
                     </td>
                
@@ -35,6 +37,8 @@
                         <ul>
                             <li><a href="viewUsersAdmin.php"> View Users</a></li>
                             <li><a href="editUsersAdmin.php"> Edit Users</a></li>
+                            <li><a href="viewEmployeesAdmin.php"> View Employees</a></li>
+                            <li><a href="editEmployeesAdmin.php"> Edit Employees</a></li>
                             
                         </ul>
                

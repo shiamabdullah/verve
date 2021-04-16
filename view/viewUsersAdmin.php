@@ -6,37 +6,39 @@ $conn = getConnection();
 
 ?>
 
-<style>
-table, th, td {
-  
-  border-collapse: collapse;
-}
+
 
 </style>
 	
 	<center>
         <h1>User list</h1>
     </center>
-	<table border="2" align="center" cellpadding="10" width="auto">
-        <tr>
-			<td>ID</td>
-			<td>NAME</td>
-			<td>EMAIL</td>
-		</tr>
+	<table class="data-table" align="center" cellpadding="8" width=50% border="1">
+      <thead>
+            <tr>
+          <td>ID</td>
+          <td>NAME</td>
+          <td> EMAIL</td>
+          <td>GENDER</td>
+            </tr>
+      </thead>
+      <tbody>
+
         <?php $sql = "select * from user";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
-		
 		{
 
             echo 	"<tr>
                         <td>{$row['id']}</td>
                         <td>{$row['name']}</td>
                         <td>{$row['email']}</td>
+                        <td>{$row['gender']}</td>
                         
                     </tr>";
         }
     ?>
+    </tbody>
     </table>
 
 

@@ -1,3 +1,5 @@
+<a class=\"btn btn-success\" href=\"editEmployeeAdmin.php?id={$row['id']}\" role=\"button\">Edit</a>
+
 <?php ;
 $title='View Products';
 include('sessionheader.php');

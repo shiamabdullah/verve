@@ -28,7 +28,8 @@
 				<tr>
 					<td>
 						<input class="btn btn-success" type="submit" name="submit" value="Submit"> 
-						<a href="signup.php">Signup</a>
+						<a class="btn btn-success" href="signup.php" role="button">Signup</a>
+
 					</td>
 				</tr>
 			</table>

@@ -2,7 +2,7 @@
 	$title='View Profile';
 	include('sessionheader.php');
     
-    //$user= $_SESSION['current_user'];
+    $user= $_SESSION['current_user'];
     
     $userdb=getUserbyId($_SESSION['current_user']['username']);
 
