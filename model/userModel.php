@@ -48,7 +48,7 @@
 
     function updateUser($user){
       $conn = getConnection();
-      $sql = "update user set name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}'";;
+      $sql = "UPDATE 'user' SET name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}'";;
       $result=mysqli_query($conn, $sql);
       if($result){
         return true;

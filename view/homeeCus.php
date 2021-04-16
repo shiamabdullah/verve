@@ -73,7 +73,7 @@
                 {
                 ?>
 
-                <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="col-lg-3 col-md-3 col-sm-12" >
 
                 <form>
 
@@ -91,7 +91,7 @@
 
                 <div class="btn-group d-flex">
                 <button class="btn btn-success flex-fill">Add to cart  
-                </button> <button class="btn btn-warning flex-fill"> Add to wishlist</button>
+                </button> <button class="btn btn-warning flex-fill "> Add to wishlist</button><br>
 
                 </div>
 

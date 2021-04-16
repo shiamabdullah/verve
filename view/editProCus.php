@@ -41,7 +41,7 @@
     <table border="1" width="100%" align="center" height="400px">
         <td align="center">
             
-        <form method="post" action="../controller/regcheckCus.php">               
+        <form method="post" action="../controller/editcheckCus.php">               
                 <fieldset style="width:320px" >
                     <legend>
                         <h3>
@@ -49,6 +49,11 @@
                         </h3>
                     </legend>
                     <table align="center" height="400px" >
+                    <tr>
+                            <td>User Name<br></td>
+                            <td>:<input type="text" name="username" value="" ></td>
+                        </tr>
+                    
                   
                         <tr>
                             <td>Email <br></td>        
@@ -57,7 +62,7 @@
                             </td>
                         </tr>
             
-                        <tr>
+                        <!-- <tr>
                             <td>User Name<br></td>
                             <td>:<input type="text" name="username" value="" ></td>
                         </tr>
@@ -70,7 +75,7 @@
                         <tr >
                             <td>Confirm Password <br></td>
                             <td>:<input type="password" name="re_password" ></td>
-                        </tr>
+                        </tr> -->
 
                         <tr>        
                             <td colspan="2">
