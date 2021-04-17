@@ -105,6 +105,14 @@ ul{
     text-align: center;
     margin-bottom: 20px;
     }
+.header-Reg{
+    text-align: center;
+    text-shadow:#eef2f3;
+
+    background: aquamarine;
+    background-image: linear-gradient( 43deg,  rgba(191,241,236,1) 22.3%, rgba(109,192,236,1) 84.1% );
+    
+    }
     
     .profile-images-card{
         margin: auto;

@@ -3,10 +3,11 @@
 	include('header.php');
 ?>
 <form name="form" method="post" action="../controller/regCheckAdmin.php">
+			
+			<fieldset>
 			<center>
 			<h2 class="header-Reg"> Sign Up </h2>
 			</center>
-			<fieldset>
 			<table align="center" cellpadding="10">
                 <tr >
                     <td>Name<br></td>

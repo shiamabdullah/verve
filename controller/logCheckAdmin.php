@@ -53,7 +53,7 @@ else {
 			   header('location: ../view/homeAdmin.php');
 			}
 			else
-			{
+			{	
 				echo "UserName or password is Incorrect!!!";
 			}
 		}
