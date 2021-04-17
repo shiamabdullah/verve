@@ -1,6 +1,6 @@
 <?php
 
-	$dbname = "webtech";
+	$dbname = "mab";
 	$dbuser	= "root";
 	$dbpass	= "";
 	$host	= "localhost";

@@ -28,11 +28,11 @@
     </table> -->
     <div class="menu-bar">
         <ul>
-            <li ><img src="../Assets/MabLogo.jpg" height="70px"></li>
-            <!-- <li class="active"><a href="viewProCus.php"><i class="fa fa-user"></i>Profile</a></li> -->
+            <li ><img src="../Assets/MabLogo.jpg" height="70px" align="left"></li>
             <li class="active"><a href="homeeCus.php"><i class="fa fa-home"></i>Home</a></li>
-            <!-- <li><a href="cartCus.php"><i class="fa fa-shopping-cart"></i>MyCart</a></li>
-            <li><a href="contact.php"><i class="fa fa-compress"></i>Contact</a></li> -->
+            <li><a href="viewProCus.php"><i class="fa fa-user"></i>Profile</a></li>
+            <li><a href="cartCus.php"><i class="fa fa-shopping-cart"></i>MyCart</a></li>
+            <li><a href="contact.php"><i class="fa fa-compress"></i>Contact</a></li>
             <li><a href="../controller/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
         </ul>
     </div>
@@ -42,14 +42,16 @@
         <td align="center">
             
             <form method="post" action="logcheckCus.php">               
-                <fieldset style="width:320px">
+                <fieldset style="width:400px">
                     <legend height>Contact</legend>
                     <table height="100px">
-                        <tr>
-                            <h3>Md.Shahil Patwary</h3>
-                            <h4>Technical Director| MAB Group |</h4> 
+                        <tr><br>
+                        <br>
+                            <h3>Md.Shahil Patwary</h3><br>
+                            <h4>Technical Director| MAB Group |</h4> <br>
                             <h5>Phone:01788264342 | Email:Shahilpatwary@gmail.com </h5>  
                         </tr>
+                        
                     </table>
                 </fieldset>
             </form>

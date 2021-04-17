@@ -48,7 +48,7 @@
 
     function updateUser($user){
       $conn = getConnection();
-      $sql = "update user set name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}'";;
+      $sql = "UPDATE 'user' SET name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}'";;
       $result=mysqli_query($conn, $sql);
       if($result){
         return true;
@@ -57,17 +57,21 @@
       }
     }
   
-  function getAllProduct($product){
+  // function getAllProduct($product){
 
-    $conn = getConnection();
-    $sql = "select * from product";
-    $result = mysqli_query($conn, $sql);
-    $product = [];
-    while ($row = mysqli_fetch_assoc($result)) {
-      array_push($product, $row);
-    }
-    return $product;
-  }
+  //   $conn = getConnection();
+  //   $sql = "select * from product";
+  //   $result = mysqli_query($conn, $sql);
+  //   $row = mysqli_fetch_assoc($result);
+  //   if($row)
+  //   {
+  //     return true;
+  //   }
+  //   else
+  //   {
+  //     return false;
+  //   }
+  // }
 
 
 ?>
