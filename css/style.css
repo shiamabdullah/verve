@@ -12,10 +12,9 @@ body
     font-family: sans-serif;
 }
 
-
 .menu-bar
 {
-    background: success;
+    background: rgb(6, 32, 58);
     text-align: center;
 }
 .menu-bar ul
@@ -44,4 +43,3 @@ body
 {
     margin-right:8px ;
 }
-
