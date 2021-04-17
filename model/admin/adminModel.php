@@ -28,9 +28,10 @@
 
 
   function insertUser($user)
-  {
+  {print_r($user);
     $conn=getConnection();
-    $sql="INSERT INTO `admin` (`name`, `username`, `password`, `usertype`, `gender`, `email`, `dob`, `address`) VALUES ('{$user['username']}', '{$user['userid']}', '{$user['password']}', '', '{$user['gender']}', '{$user['email']}', '{$user['dob']}', '{$user['address']}')";
+    $sql="INSERT INTO `admin` (`name`, `username`, `password`, `gender`, `email`, `dob`, `address`) VALUES 
+    ('{$user['username']}','{$user['userid']}','{$user['password']}','{$user['gender']}','{$user['email']}','{$user['dob']}','{$user['address']}')";
     $result=mysqli_query($conn,$sql);
     if($result)
     {

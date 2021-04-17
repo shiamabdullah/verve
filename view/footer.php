@@ -7,5 +7,6 @@
     
     </div>
         
+    <script src="scriptadmin/validate.js"></script>
 </body>
 </html>

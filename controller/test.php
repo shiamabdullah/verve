@@ -1,66 +1,141 @@
-<a class=\"btn btn-success\" href=\"editEmployeeAdmin.php?id={$row['id']}\" role=\"button\">Edit</a>
-
-<?php ;
-$title='View Products';
-include('sessionheader.php');
-require_once('../model/admin/db.php');
-require_once('../model/admin/productModel.php');
-$conn = getConnection();
-
+<?php 
+    $title="Admin Sign Up";
+	include('header.php');
 ?>
+<form name="form" method="post" action="../controller/regCheckAdmin.php">
+			<center>
+			<h2 class="header-Reg"> Sign Up </h2>
+			</center>
+			<fieldset>
+			<table align="center" cellpadding="10">
+                <tr >
+                    <td>Name<br></td>
+                    <td>
+                        <input type="text" id="name" name="name" value="" placeholder= "Enter Your Name" oninput="nameValidate();"/>
+						<br>
+						<span id="nameMsg"> </span>
 
-<style>
-table, th, td {
-  
-  border-collapse: collapse;
-}
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>User Name<br></td>
+                    <td>
+                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" required onkeyup="userNameValidate()" autocomplete="off">
+						<br>
+						<span id="userNameMsg"> </span>
+						</td>
+                </tr>
+                <tr>
+					<td>Password</td>
+					<td><input type="password" name="password" id="password" value="" placeholder= "Enter Your password" required  onkeyup="passwordValidate()">
+					<span id="passwordMsg"> </span>
+					</td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td><input type="password" name="repass" id="repass" value="" placeholder="Enter your password again" onkeyup="repassValidate()" required>
+					<span id="repassMsg"> </span>
+					</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email" value="" placeholder= "Enter your email"></td>
+				</tr>
+				<tr>
+					<td>Gender </td>
 
-
-</style>
+					<td>
+						<input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                        <input type="radio" name="gender" value="Other"> Other
+					</td>
+					</tr>
+                <tr>
+					<td>Date of Birth: </td>
+					<td> <input type="date" name="dob" value="" /> </td>
+                    <td > </td>
+				</tr>
+                <tr>
+					<td>Address</td>
+					<td> <textarea rows="6" cols="25" <input type="address" name="address" value="" placeholder= "Enter your address"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					
+					<td>
+						<input type="submit" name="signup" value="Signup"> 
+						<a href="login.php">Login</a>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
 	
-	<center>
-        <h2>View Products</h2>
-    </center>
-	<table border="2" align="center" cellpadding="10" width="auto">
-        <tr>
-			<td>ID</td>
-			<td>NAME</td>
-            <td>Category</td>
-            <td>Sub Category</td>
-            <td>Description<br></td>
-            <td>Buying Price<br></td>
-            <td>Selling Price<br></td>
-            <td>Stock<br></td>
-            <td>Displayable </td>
-            <td>img1 </td>
-            <td>img2 </td>
-            <td>img3 </td>
+	<script>
+	var name= document.getElementById("name");
+	var nameMsg=document.getElementById('nameMsg');
 
-		</tr>
-        <?php ; ?>
 
-        <?php $sql = "select * from products";
-    	$result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($result))
+	const myArray = ["1", "2","3","4","5","6","7","8","9"];
+	function nameValidate(){
 		
-		{
-            echo 	"<tr>
-                        <td>{$row['pid']}</td>
-                        <td>{$row['productName']}</td>
-                        <td>{$row['category']}</td>
-                        <td>{$row['subCategory']}</td>
-                        <td>{$row['description']}</td>
-                        <td>{$row['buyingPrice']}</td>
-                        <td>{$row['sellingPrice']}</td>
-                        <td>{$row['stock']}</td>
-                        <td>{$row['displayable']}</td>
-                        <td>{$row['photo2']}</td>
-                        <td>{$row['photo3']}</td>";             
-                        
-        }
-    ?>
-    </table>
 
+		if((name.value.length <= 2) || (name.value.length > 20)){
+			
+			nameMsg.style.color="red";
+			nameMsg.innerHTML="Must be between 2 and 20 chars!";
+
+			// for(x=0; x<myArray.length; x++){
+			// 	if(name.value.includes(myArray[x])){
+			// 		nameMsg.innerHTML = "name cannot include a number";
+			// 	}
+			
+		}
+		 else if( !isNaN(name.value) ){
+				nameMsg.style.color="red";
+				nameMsg.innerHTML="Can't contain numbers only";
+
+			}
+		
+		else{
+			nameMsg.style.color="green";
+				nameMsg.innerHTML="Okay";
+		}
+	}
+
+	// function passwordValidate(){
+	// 	let password= document.getElementById("password");
+	// 	let passwordMsg=document.getElementById('passwordMsg');
+
+	// 	if((password.value.length < 8)){
+			
+	// 		passwordMsg.style.color="red";
+	// 		passwordMsg.innerHTML="Must be atleast 8 characters";
+
+		
+	// 	}
+		 
+	// 	else{
+	// 		passwordMsg.style.color="green";
+	// 		passwordMsg.innerHTML="Okay";
+	// 	}
+	// }
+
+	// function repassValidate(){
+	// 	let repass= document.getElementById("repass");
+	// 	let repass=document.getElementById('repass');
+	// 	let password= document.getElementById("password");
+
+	// 	console.log(password+repass);
+	// }
+		
+			
+
+
+
+	</script>
 
 <?php 
 include('footer.php');

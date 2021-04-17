@@ -21,7 +21,7 @@
                 <tr>
                     <td>User Name<br></td>
                     <td>
-                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" required" autocomplete="off">
+                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" required onkeyup="userNameValidate()" autocomplete="off">
 						<br>
 						<span id="userNameMsg"> </span>
 						</td>

@@ -20,14 +20,14 @@
 			echo "null value found...";
 		}
 		else{
-            if(strlen($username)<2){
-                echo "name must be atleast 2 char\n";
+            if(strlen($username)<4){
+                echo "name must be atleast 4 char\n";
 
             }
-			 if(!(ctype_alnum($username))){
-                echo "name can only contain alphanumeric\n";
+			//  if(!(ctype_alnum($username))){
+            //     echo "name can only contain alphanumeric\n";
 
-            }
+            // }
 			elseif( !ctype_alnum(str_replace($allowed, '', $userid )) ){
                 echo "username can only contain alphanumeric char and characters, period,dash or underscore only \n";
             }
