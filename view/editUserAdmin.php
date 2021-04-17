@@ -15,20 +15,29 @@
 			<table class="data-table" align="center" cellpadding="8" width=50% border="1">
                 <tr>
 					<td>ID</td>
-					<td><input type="text" name="id" value="<?php echo $userdata['id'];?>"></td>
+					<td><input type="text" name="id" id="name" value="<?php echo $userdata['id'];?>">
+					<br>
+						<span id="nameMsg"></span>
+				</td>
+				
 				</tr>
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username" value="<?php echo $userdata['name'];?>"></td>
+					<td><input type="text" name="username" id="name" value="<?php echo $userdata['name'];?>">
+					<br>
+						<span id="nameMsg"></span>
+					</td>
 				</tr>
-				<tr>
+
 					<td>Gender</td>
 					<td><input type="gender" name="gender" value="<?php echo $userdata['gender'];?>"></td>
 				</tr>
 				
 				<tr>
 					<td>Email</td>
-					<td><input type="email" name="email" value="<?php echo $userdata['email'];?>"></td>
+					<td><input type="email" id="userEmail" name="email" value="<?php echo $userdata['email'];?>">
+					<br>
+						<span id="userEmailMsg"></span></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -40,6 +49,7 @@
 			</table>
 		</fieldset>
 	</form>
+
 <?php
 	include('footer.php');
 ?>

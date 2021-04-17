@@ -11,9 +11,13 @@ $conn = getConnection();
 </style>
 	
 	<center>
-        <h1>User list</h1>
+        <h2>User list</h2>
     </center>
+
+  
+
 	<table class="data-table"  align="center" cellpadding="8" width=50% border="1">
+        <input type="text" id="searchUser" placeholder="Seach by userId" >
       <thead>
             <tr>
           <td>ID</td>

@@ -22,8 +22,10 @@ if (session_status() == PHP_SESSION_NONE) {
 		</td>
 		<td align="center" width="40px">
 			
-			<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?>" height="200px">
-		</td>
+<div class="profile-images">
+				<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?>">
+	
+</div>		</td>
 		<td align="Right" width="30%">
                             <h3>
 								<a href="../view/homeAdmin.php" >Home</a> |

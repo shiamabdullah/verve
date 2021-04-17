@@ -69,14 +69,20 @@
                             <tr>
                             <td>Name<br></td>
                             <td>
-                            <input type="text" name="name" value="<?php echo$user['name']; ?>" />
+                            <input type="text" name="name" class="userName" value="<?php echo$user['name']; ?>" />
+                            <br>
+					        <span class="userNameMsg"> </span>
                             </td>
                             </tr>
                             
                     
                             <tr>
                             <td>Email<br></td>
-                            <td><input type="email" name="email" value="<?php echo$user['email']; ?>"></td>
+                            <td><input type="email" name="email" id="email" value="<?php echo$user['email']; ?>">
+                            <br>
+                            <span id="emailMsg"> </span>
+
+                            </td>
 				            </tr>
                             </tr>    
 
