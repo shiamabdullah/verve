@@ -69,7 +69,8 @@ include('sessionheader.php');
 					<td>Displayable </td>
 
 					<td>
-						<input type="radio" name="displayable" value="1"> 
+						<input type="radio" name="displayable" value="1"> Yes |
+						<input type="radio" name="displayable" value="0"> No
                         
 					</td>
 					</tr>

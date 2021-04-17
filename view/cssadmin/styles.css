@@ -70,3 +70,31 @@ ul{
     text-emphasis-color: green;
     
 }
+
+.bottom-menu-bar
+{
+    background: rgb(6, 32, 58);
+    text-align: center;
+}
+.bottom-menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+
+.footer{
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    text-shadow:#eef2f3;
+    background-color: aquamarine;
+    
+
+   
+}
