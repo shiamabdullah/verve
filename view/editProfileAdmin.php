@@ -69,9 +69,9 @@
                             <tr>
                             <td>Name<br></td>
                             <td>
-                            <input type="text" name="name" class="userName" value="<?php echo$user['name']; ?>" />
+                            <input type="text" name="name" id="name" value="<?php echo$user['name']; ?>" />
                             <br>
-					        <span class="userNameMsg"> </span>
+					        <span id="nameMsg"> </span>
                             </td>
                             </tr>
                             

@@ -5,7 +5,6 @@ include('sessionheader.php');
 ?>
 
 <form method="post" action="../controller/addProductCheckAdmin.php" enctype="multipart/form-data">
-		<fieldset>
 			<center><legend>Add Product</legend></center>
 			<table cellpadding=8 align="center">
                 
@@ -74,33 +73,46 @@ include('sessionheader.php');
                         
 					</td>
 					</tr>
-               
-                
+                    <!-- <tr>
+                        <td>
+                        </td>
+                        <td>
+                        <img src="../Assets/AdminPhotos/dummy.png" id="previewImg" width="200px">
+                        <img src="../Assets/AdminPhotos/dummy.png" id="previewImg2" width="200px">
+                        <img src="../Assets/AdminPhotos/dummy.png" id="previewImg3" width="200px">
 
+                        </td>
+                    </tr> -->
                     <tr>
                     <td>
                     photo 1:
                     </td>
                     <td>
-                     <input class="btn btn-success" type="file" name="file" id="file">
-                    </td>
-                    </tr>
+                      <img src="../Assets/AdminPhotos/dummy.png" id="previewImg" width="150px">
 
+                     <input class="btn btn-success" type="file" name="file" id="file" onchange="document.getElementById('previewImg').src = window.URL.createObjectURL(this.files[0])">
+                    </td>
+
+                    </tr>
+                        
                     <tr>
+                    
                     <td>
                     photo 2:
                     </td>
                     <td>
-                     <input class="btn btn-success" type="file" name="file2" id="file2">
+                    <img src="../Assets/AdminPhotos/dummy.png" id="previewImg2" width="150px">
+                     <input class="btn btn-success" type="file" name="file2" id="file2" onchange="document.getElementById('previewImg2').src = window.URL.createObjectURL(this.files[0])">
                     </td>
                     </tr>
 
                     <tr>
                     <td>
-                    photo 1:
+                    photo 3:
                     </td>
                     <td>
-                     <input class="btn btn-success" type="file" name="file3" id="file3">
+                    <img src="../Assets/AdminPhotos/dummy.png" id="previewImg3" width="150px">
+                     <input class="btn btn-success" type="file" name="file3" id="file3" onchange="document.getElementById('previewImg3').src = window.URL.createObjectURL(this.files[0])">
                     </td>
                     </tr>
                   
@@ -111,9 +123,8 @@ include('sessionheader.php');
                 </td>
 				</tr>
 			</table>
-		</fieldset>
 	</form>
-
+ 
 
 <?php 
 include('footer.php');
