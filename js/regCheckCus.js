@@ -27,10 +27,8 @@ function validateusername()
 				document.getElementById('usernamemsg').innerHTML="";
 				return true;
 			}
-			else
-			{
-				document.getElementById('usernamemsg').innerHTML="Contain at least two words";
-				return false;
+			else{
+				return true;
 			}
 		}
 		else
@@ -136,8 +134,7 @@ function validatedate()
 
 function validate()
 {
-	
-	if(validatename() && document.getElementById('usernamemsg').innerHTML=="" && validateemail() && validategender() && validatepassword() && validatedate())
+	if(validateusername() && document.getElementById('usernamemsg').innerHTML=="" && validateemail() && validategender() && validatepassword() && validatedate())
 	{
 		return true;	
 	}
