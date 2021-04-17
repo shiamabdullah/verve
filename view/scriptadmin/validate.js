@@ -55,7 +55,7 @@ $(document).ready(function () {
       
     
         name.keyup(function(){
-            //console.log(name.val);
+            console.log(name.val);
             if(name.val().length <4){
                 nameMsg.css("color", "red");
                 nameMsg.html("⚠️Must be atleast 4 char");
