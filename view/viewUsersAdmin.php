@@ -13,7 +13,7 @@ $conn = getConnection();
 	<center>
         <h1>User list</h1>
     </center>
-	<table class="data-table" align="center" cellpadding="8" width=50% border="1">
+	<table class="data-table"  align="center" cellpadding="8" width=50% border="1">
       <thead>
             <tr>
           <td>ID</td>

@@ -21,7 +21,7 @@
                 <tr>
                     <td>User Name<br></td>
                     <td>
-                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" required" autocomplete="off">
+                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" required">
 						<br>
 						<span id="userNameMsg"> </span>
 						</td>
@@ -29,18 +29,21 @@
                 <tr>
 					<td>Password</td>
 					<td><input type="password" name="password" id="password" value="" placeholder= "Enter Your password" required ">
+					<br>
 					<span id="passwordMsg"> </span>
 					</td>
 				</tr>
 				<tr>
 					<td>Confirm Password</td>
 					<td><input type="password" name="repass" id="repass" value="" placeholder="Enter your password again"required>
-					<span id="repassMsg"> </span>
+					<br><span id="repassMsg"> </span>
 					</td>
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="email" name="email" value="" placeholder= "Enter your email"></td>
+					<td><input type="email" name="email" id="email" value="" placeholder= "Enter your email">
+					<br><span id="emailMsg"> </span>
+				</td>
 				</tr>
 				<tr>
 					<td>Gender </td>
@@ -65,8 +68,10 @@
 					<td></td>
 					
 					<td>
-						<input type="submit" name="signup" value="Signup"> 
-						<a href="login.php">Login</a>
+						<input type="submit" class="btn btn-success" name="signup" value="Signup"> 
+			
+						<a class="btn btn-success" href="loginAdmin.php">Login</a>
+
 					</td>
 				</tr>
 			</table>

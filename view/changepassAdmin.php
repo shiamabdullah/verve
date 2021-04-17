@@ -76,17 +76,27 @@
                     
                             <tr>
                             <td>Previous Password<br></td>
-                            <td><input type="password" name="previousPassword" value=""></td>
+                            <td><input type="password"  id="password" name="previousPassword" value="" required>
+                            <br>
+					        <span id="passwordMsg"> </span>
+					        </td>
 				            </tr>
 
                             <tr>
                             <td>New Password<br></td>
-                            <td><input type="password" name="newPassword" value=""></td>
+                            <td><input type="password" id="newPass" name="newPassword" value="">
+                            <br>
+					        <span id="newPassMsg"> </span>
+					        </td>
+				            </tr>
 				            </tr>
 
                             <tr>
                             <td>Confirm Password<br></td>
-                            <td><input type="password" name="confirmPassword" value=""></td>
+                            <td><input type="password" id="conPass" name="confirmPassword" value="">
+                            <br>
+					        <span id="conPassMsg"> </span>
+					        </td>
 				            </tr>
 
                             

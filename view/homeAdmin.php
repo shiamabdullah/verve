@@ -34,13 +34,20 @@
                    		 <center>
 						<h3> User Accounts</h3>
 						</center>
-                        <ul>
-                            <li><a href="viewUsersAdmin.php"> View Users</a></li>
-                            <li><a href="editUsersAdmin.php"> Edit Users</a></li>
-                            <li><a href="viewEmployeesAdmin.php"> View Employees</a></li>
-                            <li><a href="editEmployeesAdmin.php"> Edit Employees</a></li>
+                        <ul >
+                            <li><a  href="viewUsersAdmin.php"> View Users</a></li>
+                            <li ><a href="editUsersAdmin.php"> Edit Users</a></li>
+                            <li><a  href="viewEmployeesAdmin.php"> View Employees</a></li>
+                            <li ><a href="editEmployeesAdmin.php"> Edit Employees</a></li>
                             
                         </ul>
+                        <!-- <ul class="list-group text-center border-0">
+                            <li class="list-group-item border-0 "><a class="btn btn-success bg-gradient " href="viewUsersAdmin.php"> View Users</a></li>
+                            <li class="list-group-item border-0"><a class="btn btn-success  " href="editUsersAdmin.php"> Edit Users</a></li>
+                            <li class="list-group-item border-0"><a class="btn btn-success   "  href="viewEmployeesAdmin.php"> View Employees</a></li>
+                            <li class="list-group-item border-0"><a class="btn btn-success  "  href="editEmployeesAdmin.php"> Edit Employees</a></li>
+                            
+                        </ul> -->
                
                     </td>
 
