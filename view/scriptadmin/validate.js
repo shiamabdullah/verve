@@ -25,7 +25,8 @@ $(document).ready(function () {
         const conPassMsg = $("#conPassMsg");
 
         const userEmailMsg=$("#userEmailMsg");
-    
+
+   
     
         userName.keyup(function(){
         var admin= userName.val();
@@ -220,24 +221,28 @@ $(document).ready(function () {
                     });
                     });
 
-                
-
-                //     searchUser.keyup(function(){
-                //     var search_user = searchUser.val();
-                //     $.ajax({
-                //         url: "../../controller/AjaxController.php",
-                //         method: "get",
-                //         datatype: "json",
-                //         data: {
-                //             search_user: search_user,
-                //         },
-                //         success: function (data) {
-                //             $("#initial-doctor-row").html(data);
-                //         }
-                //     });
-                // });
+                    const searchUser= $("#searchUser");
+                    const result= $("#result");
 
 
+                searchUser.keyup(function(){
+                    var user = searchUser.val();
+                    console.log(user);
+                    $.ajax({    
+                      type:'POST',
+                      url: "../view/scriptadmin/searchUser.php",
+                      data:{
+                        s_user:user,
+                      },
+                        dataType:"text",
+
+                      success:function(data){
+                        $("#result").html(data);
+                    }
+                    });
+                  });
+
+                    
                 
         });
     

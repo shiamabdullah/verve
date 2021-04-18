@@ -1,5 +1,5 @@
 <?php ;
-$title='View Users';
+$title='Search Users';
 include('sessionheader.php');
 require_once('../model/admin/db.php');
 $conn = getConnection();
@@ -21,9 +21,12 @@ $conn = getConnection();
   </div>
   
 
-	<table class="data-table"  align="center" cellpadding="8" width=50% border="1">
+	<table class="data-table"  align="center" cellpadding="8" width=100%>
         <!-- <input type="text" id="searchUser" placeholder="Seach by userId" > -->
       <thead>
+     
+
+      </tr>
             <tr>
           <td>ID</td>
           <td>NAME</td>
@@ -32,8 +35,7 @@ $conn = getConnection();
             </tr>
       </thead>
       <tbody id="result">
-
-        <?php $sql = "select * from user";
+      <?php $sql = "select * from user";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
 		{
@@ -49,6 +51,7 @@ $conn = getConnection();
 
         }
     ?>
+     
     </tbody>
     </table>
 
