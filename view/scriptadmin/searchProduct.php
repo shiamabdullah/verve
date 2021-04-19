@@ -10,7 +10,7 @@
         while ($row=mysqli_fetch_assoc($result)) 
         {
             $img1= "<img src=\"{$row['photo1']}\" width=\"150px\" height=\"150px\">";
-         $img2= "<img src=\"{$row['photo2']}\" class\"rounded mx-auto d-block\">";
+         $img2= "<img src=\"{$row['photo2']}\"width=\"150px\" height=\"150px\">";
          $img3= "<img src=\"{$row['photo3']}\" width=\"150px\" height=\"150px\">";
            
             echo 	

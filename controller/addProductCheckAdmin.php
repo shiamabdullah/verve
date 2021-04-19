@@ -1,5 +1,8 @@
 <?php ;
-    require_once ('../view/sessionheader.php');
+    $title='view added product';
+
+    include_once ('../view/sessionheader.php');
+
 	require_once('../model/admin/productModel.php');
     $conn = getConnection();
 
@@ -87,7 +90,8 @@
                 $status=insertProduct($product);
                 if($status==1)
                     {
-                        echo "added to database<br>"; 
+                        $_SESSION['stat']="Added Product";
+                        $_SESSION['stat_code']="success";                        
                         
                     }
                     else
@@ -108,6 +112,7 @@
 
         }
 		
+        require_once ('../view/footer.php');
 
     
 

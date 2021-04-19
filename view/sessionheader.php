@@ -8,7 +8,10 @@ if (session_status() == PHP_SESSION_NONE) {
 	}
 
     ?>
-
+<?php 
+	$user=getUserbyId($_SESSION['current_user']['username']); 
+	$_SESSION['current_user']=$user;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,14 +32,14 @@ if (session_status() == PHP_SESSION_NONE) {
 					<td align="center" colspan="2">
 				
 				<div class="profile-images">
-						<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?> ">
+						<img src="<?php    echo $user['imgsrc'];?> ">
 			
 				</div>		</td>
 				
 				<td align="Right" width="30%">
 										  <h3>
 										<a href="../view/homeAdmin.php" >Home</a> |
-										<?php echo $_SESSION['current_user']['username']; ?>  | 
+										<?php echo $user['username'] ?>  | 
 											  <a href="../controller/logout.php" >Signout</a>
 										  </h3>
 										  

@@ -47,13 +47,15 @@
               
 				$status=editUser($user);
                 if($status)
-                {
+                {   $_SESSION['stat']="Edited Successfully";
+                    $_SESSION['stat_code']="success";
                     header('location: ../view/viewProfileAdmin.php');
 
                 }
                 else
-                {
-                    echo "Error";
+                {   $_SESSION['stat']="Error";
+                    $_SESSION['stat_code']="success";
+                    header('location: ../view/editProfileAdmin.php');
                 }
                 //header('location: ../view/loginAdmin.php');
     

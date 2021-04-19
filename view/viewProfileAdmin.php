@@ -5,7 +5,7 @@
     $user= $_SESSION['current_user'];
     
     $userdb=getUserbyId($_SESSION['current_user']['username']);
-
+    //print_r($userdb);
     //image 
     $username= $_SESSION['current_user']['username']; 
     $img_name=$userdb['imgsrc'];
@@ -27,7 +27,7 @@
 					</center>
 				</tr>  
 				<tr>
-				<h2> Welcome,  <?php echo $_SESSION['current_user']['username']; ?> </h2> 
+				<h2> Welcome,  <?php echo $userdb['name']; ?> </h2> 
 				</tr>
     </table>
     
@@ -71,7 +71,7 @@
                         <table cellpadding=8>
                             <tr>
                                 <td>Name<br></td>
-                                <td >: <?php echo $user['name']; ?></td>
+                                <td >: <?php echo $userdb['name']; ?></td>
                                 <td rowspan="5" width="40px">
 
                                 </td>
@@ -80,22 +80,22 @@
                                 </td>
                             <tr>
                             <td>Email<br></td>
-                                <td>: <?php echo $user['email']; ?></td>
+                                <td>: <?php echo $userdb['email']; ?></td>
                             </tr>    
                                
                                 
                                <tr>
                                     <td>Username<br></td>
-                                    <td>: <?php echo $user['username']; ?></td>
+                                    <td>: <?php echo $userdb['username']; ?></td>
                                </tr>
                                <tr>
                                     <td>Address<br></td>
-                                    <td>: <?php echo $user['address']; ?></td>
+                                    <td>: <?php echo $userdb['address']; ?></td>
                                </tr>
                                 
                              <tr>
                                     <td>Dob<br></td>
-                                    <td>: <?php echo $user['dob']; ?></td>
+                                    <td>: <?php echo $userdb['dob']; ?></td>
                                     <td> <a href="changephotoAdmin.php" > Change Photo</a> </td>
                              </tr>
 

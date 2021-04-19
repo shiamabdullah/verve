@@ -23,7 +23,7 @@
 					<td>Username</td>
 					<td><input type="text" name="username" id="name" value="<?php echo $userdata['name'];?>">
 					<br>
-						<span id="nameMsg">ss</span>
+						<span id="nameMsg"></span>
 					</td>
 				</tr>
 

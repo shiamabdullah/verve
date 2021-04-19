@@ -20,7 +20,7 @@
 				<tr>
 					<td>Username</td>
 					<td><input type="text" name="username" id="name" value="<?php echo $userdata['username'];?>">
-					<span id="nameMsg">ss</span>
+					<span id="nameMsg"></span>
 				</td>
 				</tr>
 				<tr>

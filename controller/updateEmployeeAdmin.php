@@ -1,7 +1,9 @@
 <?php ;
 require_once('../model/admin/db.php');
 $conn = getConnection();
-	
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
     if(isset($_POST['edit'])){
         $id = $_POST['id'];
@@ -13,7 +15,12 @@ $conn = getConnection();
         echo($result);
         if ($result==1){
             echo "updated <br>";
-        echo    " <a href=\"../view/editEmployeesAdmin.php\"> View Updated list </a> "; }
+            $_SESSION['stat']="Edited Employee";
+            $_SESSION['stat_code']="success";
+            header('location: ../view/editEmployeesAdmin.php');
+            //echo    " <a href=\"../view/editEmployeesAdmin.php\"> View Updated list </a> "; 
+    }
+    
     }
 
 ?>
