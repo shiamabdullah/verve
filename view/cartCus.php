@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['flag'])){
+        require_once('../model/userModel.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,51 +53,29 @@
                     <td><b>Product</b></td>
 			        <td><b>Price</b></td>
                     </tr>
-                    <r>
-                    <td>Shirt</td>
-                    <td>650.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> Buy</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>Radium</td>
-                    <td>99.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> Buy</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>Banana</td>
-                    <td>15.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> Buy</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>pant</td>
-                    <td>550.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> Buy</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>fan</td>
-                    <td>1650.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> Buy</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>
-                    <input type="submit" name="submit" value="Buy">
-                    </td>
-                    </tr>
+                    <?php
+                        $conn=getConnection(); 
+                        $sql = "select p.productName as productName,p.sellingPrice as sellingPrice FROM cart as c, products as p where c.productId = p.pid && c.username = '{$_SESSION['username']}'";
+                        $result = mysqli_query($conn, $sql);
+                        $num=mysqli_num_rows($result);
+                        if($num > 0)
+                        {
+                            $total = 0;
+                            while($product=mysqli_fetch_array($result))
+                                {
+                                    $total += $product['sellingPrice'];
+                                ?>
+
+                                <tr>
+                                    <td><b><?php echo $product['productName']; ?></b></td>
+                                    <td><b><?php echo $product['sellingPrice'];?></b></td>
+                                </tr>
+
+                                <?php
+                        }
+                        echo $total;
+                    }   
+                        ?>
                     </table>
                 </fieldset>
             </form>

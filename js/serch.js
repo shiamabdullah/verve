@@ -4,6 +4,7 @@ function search(productName){
 }
 function fetchSearchData(productName)
 {
+    
     fetch('SearchCheckCus.php',{
         method:'post',
         body:new URLSearchParams('productName'+productName)

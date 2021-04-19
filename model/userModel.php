@@ -1,10 +1,18 @@
 <?php
   require_once('db.php');
-  
   function addToCart($username,$pid){
-    
+    $conn=getConnection();
+    $sql="insert into cart values('', '$username', '$pid')";
+    $result=mysqli_query($conn,$sql);
+    if($result)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
   }
-
   function validationUser($username,$password)
   {
      $conn=getConnection();
@@ -52,9 +60,11 @@
 
     function updateUser($user){
       $conn = getConnection();
-      $sql = "UPDATE 'user' SET name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']} where name='$username''";;
+      $sql = "update user SET name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}' where name='{$_SESSION['username']}'";;
       $result=mysqli_query($conn, $sql);
+      //echo $sql;
       if($result){
+        $_SESSION['username'] = $user['username'];
         return true;
       }else{
         return false;
