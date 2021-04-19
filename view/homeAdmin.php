@@ -3,7 +3,7 @@
 	include('sessionheader.php');
 ?>
 
-	<table  width=100% align="center" cellpadding="8">    
+	<table class="table table-borderless success" width=100% align="center" cellpadding="20">    
 				<tr>
 					<center>
 					<h1>Admin Panel</h1>
@@ -59,6 +59,7 @@
                                 <ul>
                                     <li><a  href="viewEmployeesAdmin.php"> View Employees</a></li>
                                     <li ><a href="editEmployeesAdmin.php"> Edit Employees</a></li>
+                                    <li ><a href="searchEmployeesAdmin.php"> Search Employees</a></li>
                                     
                                 </ul>
                             </li>

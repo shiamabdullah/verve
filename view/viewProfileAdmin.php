@@ -19,7 +19,6 @@
     }
     
 ?>
-<link rel="stylesheet" href="cssadmin/styles.css"/>
 
 	<table width="100%" align="center">    
 				<tr>
@@ -32,7 +31,7 @@
 				</tr>
     </table>
     
-    <table width="100%"  border='1' >
+    <table class="table-primary" width="100%" cellpadding="10" >
     <!-- <thead>
                     <th>
 						<center>

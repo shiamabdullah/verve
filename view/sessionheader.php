@@ -18,34 +18,33 @@ if (session_status() == PHP_SESSION_NONE) {
 	<title><?=$title?></title>
 	<div class="header">
 
-	<table width="100%" >
-			<tr>
-				<td align="left" width="30%">
-				<div class="logo-images">
-					<img src="../model/media/logo.jpg" height="60px">
-					
-				</div>		
-				</td>
+	<table class="table table-borderless success" width="100%" >
+				<tr>
+					<td align="left" width="30%">
+					<div class="logo-images">
+						<img src="../model/media/logo.jpg" height="60px">
+						
+					</div>		
+					</td>
+					<td align="center" colspan="2">
+				
+				<div class="profile-images">
+						<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?> ">
 			
-			<td align="Right" width="30%">
-									  <h3>
-									<a href="../view/homeAdmin.php" >Home</a> |
-									<?php echo $_SESSION['current_user']['username']; ?> | 
-										  <a href="../controller/logout.php" >Signout</a>
-									  </h3>
-									  
-				  </td>
-			</tr>
-		</div>
+				</div>		</td>
+				
+				<td align="Right" width="30%">
+										  <h3>
+										<a href="../view/homeAdmin.php" >Home</a> |
+										<?php echo $_SESSION['current_user']['username']; ?>  | 
+											  <a href="../controller/logout.php" >Signout</a>
+										  </h3>
+										  
+					  </td>
+				</tr>
+			</div>
 
-		<tr>
-		<td align="center" colspan="2">
-			
-			<div class="profile-images">
-					<img src="<?php $user=getUserbyId($_SESSION['current_user']['username']);    echo $user['imgsrc'];?>">
-		
-			</div>		</td>
-		</tr>
+	
 	</table>
 
 </head>
