@@ -14,14 +14,18 @@ session_start();
     
      if (empty($file_name) or empty($file_type) or empty($file_size) or empty($file_tem_loc)  ){
         echo "null";
+        $_SESSION['stat']="Not Uploaded Profile Picture";
+        $_SESSION['stat_code']="error";
      }
  
      else if ( ( strpos($file_type, 'jpeg')!== false or str_contains($file_type, 'png') or str_contains($file_type, 'jpg'))!=true )
-     {
+     {   $_SESSION['stat']="Not Uploaded Profile Picture";
+         $_SESSION['stat_code']="error";
          echo'enter a valid img file  jpeg or jpg or png ';
      }
      else if ((floatval($file_size)/1000)>=4096)
-     {
+     {   $_SESSION['stat']="Not Uploaded Profile Picture";
+      $_SESSION['stat_code']="error";
          echo 'file is greater than 4mb';
  
      }
@@ -30,14 +34,17 @@ session_start();
     if (is_uploaded_file($_FILES['file']['tmp_name']))
     {       
          move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
-         echo "uploaded";
          //echo $target_file;
         uploadPhotoAdmin($target_file,$uid);
+        $_SESSION['stat']="Uploaded Profile Picture";
+        $_SESSION['stat_code']="success";
         header('location: ../view/viewProfileAdmin.php');
          
     }
    else {
-  echo "not uploaded";  }     
+    $_SESSION['stat']="Not Uploaded Profile Picture";
+    $_SESSION['stat_code']="error";
+    echo "not uploaded";  }     
 }    
 
   }

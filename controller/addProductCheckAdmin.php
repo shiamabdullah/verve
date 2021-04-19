@@ -1,8 +1,8 @@
 <?php ;
     $title='view added product';
 
-    include_once ('../view/sessionheader.php');
-
+    //include_once ('../view/sessionheader.php');
+    session_start();
 	require_once('../model/admin/productModel.php');
     $conn = getConnection();
 

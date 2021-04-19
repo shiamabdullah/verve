@@ -34,7 +34,9 @@ if (session_status() == PHP_SESSION_NONE) {
 				<div class="profile-images">
 						<img src="<?php    echo $user['imgsrc'];?> ">
 			
-				</div>		</td>
+				</div>		
+			
+			</td>
 				
 				<td align="Right" width="30%">
 										  <h3>
