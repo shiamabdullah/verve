@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['flag'])){
+    require_once('../model/userModel.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,54 +47,32 @@
                     <legend height>My WishList</legend>
                     <table height="300px">
                     <tr>
-                    <td><b>Product</b></td>
-			        <td><b>Price</b></td>
+                    <td><u><b>Product</b></u></td>
+			        <td><u><b>Price</b></u></td>
                     </tr>
-                    <r>
-                    <td>Shirt</td>
-                    <td>650.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> ADD CART</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>Radium</td>
-                    <td>99.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> ADD CART</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>Banana</td>
-                    <td>15.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> ADD CART</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>pant</td>
-                    <td>550.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> ADD CART</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>fan</td>
-                    <td>1650.00</td>
-                    <td>
-                    <a href="edit.php?id=1"> ADD CART</a> |
-                    <a href="delete.php?id=1"> DELETE</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>
-                    <input type="submit" name="submit" value="ADD All CART">
-                    </td>
-                    </tr>
+                    <?php
+                        $conn=getConnection(); 
+                        $sql = "select p.productName as productName,p.sellingPrice as sellingPrice FROM wish as c, products as p where c.productId = p.pid && c.username = '{$_SESSION['username']}'";
+                        $result = mysqli_query($conn, $sql);
+                        $num=mysqli_num_rows($result);
+                        if($num > 0)
+                        {
+                           
+                            while($product=mysqli_fetch_array($result))
+                                {
+                                   
+                                ?>
+
+                                <tr>
+                                    <td><?php echo $product['productName']; ?> BDT</td>
+                                    <td><?php echo $product['sellingPrice'];?> BDT</td>
+                                </tr>
+
+                                <?php
+                        }
+                        
+                    }   
+                        ?>
                     
                     </table>
                 </fieldset>
