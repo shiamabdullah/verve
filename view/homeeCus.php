@@ -82,7 +82,7 @@
 
                 <div class="btn-group d-flex">
                 <button onclick="addToCart('<?php echo $_SESSION['username'] ?>','<?php echo $product['pid'] ?>')" class="btn btn-success flex-fill">Add to cart  </button> 
-                <button class="btn btn-warning flex-fill "> Add to wishlist </button><br>
+                <button onclick="addToWish('<?php echo $_SESSION['username'] ?>','<?php echo $product['pid'] ?>')"class="btn btn-warning flex-fill "> Add to wishlist </button><br>
 
                 </div>
 
