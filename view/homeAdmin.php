@@ -84,7 +84,7 @@
                                 <li><a href="addProductAdmin.php"> Add Product</a></li>
                                 <li><a href="viewProductAdmin.php"> View Product</a></li>
                                 <li><a href="searchProductAdmin.php"> Search Product</a></li>
-                                <!-- <li><a href="addDiscountAdmin.php"> Discount Product</a></li> -->
+                                <li><a href="editProductsAdmin.php"> Edit Product(Discount)</a></li>
                             </ul>
                             </li>
                         </ul>
