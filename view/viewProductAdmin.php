@@ -19,7 +19,7 @@ table, th, td {
 	<center>
         <h2>View Products</h2>
     </center>
-	<table class="data-table" border="2" align="center" cellpadding="10" width="auto">
+	<table class="data-table" border="2" align="center" cellpadding="8" width="auto">
   <thead>
   <tr>
 			<td>ID</td>
@@ -53,9 +53,9 @@ table, th, td {
                 <td><?php echo $row['sellingPrice']; ?></td>
                 <td><?php echo $row['stock']; ?></td>
                 <td><?php echo $row['displayable']; ?></td>
-                 <td><img src="<?php echo $row['photo1']; ?>" width="200px" height="200px"></td>
-                <td><img src="<?php echo $row['photo2']; ?>" width="200px" height="200px"></td>
-                <td><img src="<?php echo $row['photo3']; ?>" width="200px" height="200px"></td>
+                 <td><img src="<?php echo $row['photo1']; ?>" width="150px" height="150px"></td>
+                <td><img src="<?php echo $row['photo2']; ?>" width="150px" height="150px"></td>
+                <td><img src="<?php echo $row['photo3']; ?>" width="150px" height="150px"></td>
               </tr>	
             <?php
             }

@@ -12,13 +12,13 @@
   }
 
   function validateUser($username,$password)
-  {
+  {     
         $conn= $conn=getConnection();
         $sql = "select * from admin where username='{$username}' and password='{$password}'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($result);
-
-        if(count($row) > 0){
+        echo $row;
+        if($row){
             return true;
           }
           else{

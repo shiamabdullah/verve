@@ -49,12 +49,17 @@ else {
 			   $_SESSION['flag']=true;
 			   $user=getUserbyId($username);
 			   $_SESSION['current_user'] = $user;
+			   $_SESSION['stat']="Logged in";
+            	$_SESSION['stat_code']="success";
 			   print_r($_SESSION['current_user']);
 			   header('location: ../view/homeAdmin.php');
 			}
 			else
-			{	
-				echo "UserName or password is Incorrect!!!";
+			{	$_SESSION['stat']="Not logged in Succesfully";
+            	$_SESSION['stat_code']="error";
+			
+				header('location: ../view/loginAdmin.php');
+
 			}
 		}
 	}

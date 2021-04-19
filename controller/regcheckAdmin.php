@@ -33,6 +33,7 @@
             }
            
             else if(strlen($userid)<2){
+			
                 echo "username must be atleast 2 char\n";
 
             }
@@ -75,11 +76,14 @@
 				$status=insertUser($user);
 				echo $status;
                 if($status)
-                {
+                {	$_SESSION['stat']="Registered in";
+					$_SESSION['stat_code']="success";
                     header('location: ../view/loginAdmin.php');
                 }
                 else
                 {
+				$_SESSION['stat']="Not Registered Succesfully";
+				$_SESSION['stat_code']="error";
                     echo "Error";
                 }
                 //header('location: ../view/loginAdmin.php');
