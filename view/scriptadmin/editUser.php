@@ -15,8 +15,7 @@
                         <td>{$row['email']}</td>
                         <td>{$row['gender']}</td>
                         <td>
-                        <a class=\"btn btn-success\" href=\"editUserAdmin.php?id={$row['id']}\" role=\"button\">Edit</a>
-                        <a class=\"btn btn-success\" href=\"../controller/deleteCustomerAdmin.php?id={$row['id']}\" role=\"button\">Delete</a>
+                        <a class=\"btn btn-success\" href=\"editProductAdmin.php?id={$row['pid']}\" role=\"button\">Edit</a>
                         </td>
                         
                     </tr>";

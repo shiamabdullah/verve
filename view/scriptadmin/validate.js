@@ -285,4 +285,23 @@ $(document).ready(function () {
             },
         });
     });
+    const editProduct = $("#editProduct");
+    const editProductResult = $("#editProductResult");
+
+    editProduct.keyup(function () {
+        var product = editProduct.val();
+        console.log(product);
+        $.ajax({
+            type: "POST",
+            url: "../view/scriptadmin/editProduct.php",
+            data: {
+                e_product: product,
+            },
+            dataType: "text",
+
+            success: function (data) {
+                editProductResult.html(data);
+            },
+        });
+    });
 });

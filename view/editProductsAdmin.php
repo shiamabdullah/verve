@@ -15,9 +15,14 @@ table, th, td {
 
 
 </style>
-	
+	  
+  <div id="searchbar">
+    <label>Search</label>
+   <input type="text" id="editProduct" placeholder="Product Name" >
+
+  </div>
 	<center>
-        <h2>View Products</h2>
+        <h2>Edit Products</h2>
     </center>
 	<table class="data-table" border="2" align="center" cellpadding="8" width="auto">
   <thead>
@@ -39,7 +44,7 @@ table, th, td {
 
 		</tr>
     </thead>      
-    <tbody>
+    <tbody id="editProductResult">
         <?php $sql = "select * from products";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))
