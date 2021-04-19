@@ -47,8 +47,8 @@
                     <legend height>My WishList</legend>
                     <table height="300px">
                     <tr>
-                    <td><b>Product</b></td>
-			        <td><b>Price</b></td>
+                    <td><u><b>Product</b></u></td>
+			        <td><u><b>Price</b></u></td>
                     </tr>
                     <?php
                         $conn=getConnection(); 
@@ -64,8 +64,8 @@
                                 ?>
 
                                 <tr>
-                                    <td><b><?php echo $product['productName']; ?></b></td>
-                                    <td><b><?php echo $product['sellingPrice'];?></b></td>
+                                    <td><?php echo $product['productName']; ?> BDT</td>
+                                    <td><?php echo $product['sellingPrice'];?> BDT</td>
                                 </tr>
 
                                 <?php

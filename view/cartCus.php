@@ -50,8 +50,8 @@
                     <legend height>My Cart</legend>
                     <table height="300px">
                     <tr>
-                    <td><b>Product</b></td>
-			        <td><b>Price</b></td>
+                    <td><u><b>Product</b></u></td>
+			        <td><u><b>Price</b></u></td>
                     </tr>
                     <?php
                         $conn=getConnection(); 
@@ -67,13 +67,13 @@
                                 ?>
 
                                 <tr>
-                                    <td><b><?php echo $product['productName']; ?></b></td>
-                                    <td><b><?php echo $product['sellingPrice'];?></b></td>
+                                    <td><?php echo $product['productName']; ?></td>
+                                    <td><?php echo $product['sellingPrice'];?></td>
                                 </tr>
 
                                 <?php
                         }
-                        echo $total;
+                         echo "<h3> Total:". $total." BDT</h3>";
                     }   
                         ?>
                     </table>
