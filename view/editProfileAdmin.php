@@ -16,7 +16,6 @@
     }
     
 ?>
-<link rel="stylesheet" href="cssadmin/styles.css"/>
 
 	<table width="100%" align="center">    
 				<tr>
@@ -28,26 +27,13 @@
 				<h2> Welcome,  <?php echo $_SESSION['current_user']['username']; ?> </h2> 
 				</tr>
     </table>
-    
-    <table width="100%" class="table table-borderless" cellpadding="10">
-    <!-- <thead>
-                    <th>
-						<center>
-						Account
-						</center>
-                    </th>
-                    
-                    
-                    <th>
-                    <center>
-						 Edit Profile
-						</center>
-                    </th>
-    </thead> -->
+    <table class="table table-borderless" width="100%" cellpadding="10" >
 
     <tbody>
-        <td>
-        <ul> 
+    
+    <td>
+    <ul>
+                            
             <li> <h3>Account </h3>
 
                 <ul>
@@ -59,6 +45,7 @@
             </li>
         </ul>
          </td>
+
         <td align="center">
         <form method="post" action="../controller/editCheckAdmin.php">
             <fieldset style="width:100%">
@@ -89,12 +76,12 @@
 
                             </td>
 				            </tr>
-                            </tr>    
 
                                <tr>
                                     <td>Address<br></td>
-                                    <td><input type="address" name="address" value="<?php echo$user['address']; ?>"></td>                               </tr>
-                                </tr>
+                                    <td><textarea rows="6" cols="25"
+                                        <input type="address" name="address" value="<?php echo$user['address']; ?>"> </textarea>     </td>                    </tr>
+                                    </tr>
                                 <tr>
                                     <td>Gender </td>
 

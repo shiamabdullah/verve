@@ -29,7 +29,7 @@
 				</tr>
     </table>
     
-    <table width="100%"  border='1'>
+    <table width="100%"  class="table table-borderless" cellpadding="10">
     <!-- <thead>
                     <th>
 						<center>

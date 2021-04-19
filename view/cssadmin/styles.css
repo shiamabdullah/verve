@@ -9,9 +9,8 @@ html {
   
 body{
     font-family: Poppins;
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab); 
+    background: linear-gradient(to left, #eef2f3, #adbcc9); 
     color:black;
     margin-bottom: 60px;
 
@@ -292,8 +291,8 @@ ul.a {
     }
 
     .logo-images{
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         overflow: hidden;
         margin-top: 0,auto;

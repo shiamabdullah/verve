@@ -31,7 +31,7 @@
 				</tr>
     </table>
     
-    <table class="table-primary" width="100%" cellpadding="10" >
+    <table class="table table-borderless" width="100%" cellpadding="10" >
     <!-- <thead>
                     <th>
 						<center>
@@ -49,7 +49,6 @@
 
     <tbody>
     
-    <fieldset>
     <td>
     <ul>
                             
@@ -64,7 +63,6 @@
             </li>
         </ul>
          </td>
-    </fieldset>
     
 
         <td align="center">
