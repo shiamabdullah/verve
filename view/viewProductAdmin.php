@@ -44,18 +44,18 @@ table, th, td {
         {
             ?>
               <tr>
-                <td><?php echo $row['pid']; ?></td>
+              <td><?php echo $row['pid']; ?></td>
                 <td><?php echo $row['productName']; ?></td>
                 <td><?php echo $row['category']; ?></td>
                 <td><?php echo $row['subCategory']; ?></td>
+                <td><?php echo $row['description']; ?></td>
                 <td><?php echo $row['buyingPrice']; ?></td>
                 <td><?php echo $row['sellingPrice']; ?></td>
                 <td><?php echo $row['stock']; ?></td>
                 <td><?php echo $row['displayable']; ?></td>
-                <td><?php echo $row['productName']; ?></td>
-                <td><img src="<?php echo $row['photo1']; ?>" width="100" height="100"></td>
-                <td><img src="<?php echo $row['photo2']; ?>" width="100" height="100"></td>
-                <td><img src="<?php echo $row['photo3']; ?>" width="100" height="100"></td>
+                 <td><img src="<?php echo $row['photo1']; ?>" width="200px" height="200px"></td>
+                <td><img src="<?php echo $row['photo2']; ?>" width="200px" height="200px"></td>
+                <td><img src="<?php echo $row['photo3']; ?>" width="200px" height="200px"></td>
               </tr>	
             <?php
             }
