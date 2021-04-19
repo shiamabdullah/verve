@@ -6,9 +6,11 @@
     {        
         $email = $_POST['email'];
         $username = $_POST['username'];
-        $password  = $_POST['password'];
-        $re_password = $_POST['re_password'];
-        $gender = $_POST['gender'];
+        if(isset($_POST['password'])){
+            $password  = $_POST['password'];
+            $re_password = $_POST['re_password'];
+            $gender = $_POST['gender'];
+        }
         $dob = $_POST['dob'];
         
         if ($email == "" || $username =="") 
@@ -18,15 +20,14 @@
         else{
                 $user = [
                     'username'=> $username,
-                    'password'=> $password,
                     'email'=>$email,
-                    'gender'=>$gender,
                     'dob'=>$dob
                 ];
                 $status=updateUser($user);
+                //echo $status;
                 if($status)
                 {
-                    header('location: ../view/viewProCus.html');
+                    header('location: ../view/viewProCus.php');
                 }
                 else
                 {

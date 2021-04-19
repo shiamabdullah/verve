@@ -9,7 +9,7 @@ function addToCart(username,productId){
         ,  
         success: function (data) {  
             if(data){
-                alert(data);
+                alert("Product Added to Cart!!!");
             }
             else{
                 alert("Something went wrong!!!");
