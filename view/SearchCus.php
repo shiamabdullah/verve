@@ -15,20 +15,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- <table border="1" width="100%" align="center">
-        <tr>
-            <td colspan="3" height="80px" align="left">
-                <img src="../Assets/MabLogo.jpg" height="70px">
-            </td>
-            <td align="Right">
-                <h4>
-                    <a href="homeeCus.php"> Home</a> |
-                    <a href="contact.php"> Contact</a> |
-                    <a href="../controller/logout.php">Logout</a> 			
-                </h4>
-            </td>
-        </tr>
-    </table> -->
     <div class="menu-bar">
         <ul>
             <li ><img src="../Assets/MabLogo.jpg" height="70px"></li>
@@ -38,48 +24,42 @@
             <li><a href="../controller/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
         </ul>
     </div>
-    <table border="1" width="100%" align="center" height="300px">
-        <td align="center">
-            
-        <form method="post" action="SearchCheckCus.php">               
-                <fieldset style="width:320px" >
-                    <legend>
-                        <h3>
-                        Search Product
-                        </h3>
-                    </legend>
-                    <table align="center" height="400px" > 
-                    <tr>
-                            <h1>Name<br></h1>
-                            <input type="text" name="name" value="" placeholder="Search hare" id="SearchBox" oninput=search(this.value) >
-                            
-                    </tr>
-                    </table>
-                </fieldset>
-            </form>
-            <?php
-        $conn=getConnection(); 
-        $sql = "select * from products order by pid ASC";
+    <div id="searchbar">
+    <label>Search Product: </label>
+   <input type="text" id="searchProduct" placeholder="Product Name" >
+
+  </div>
+  
+	<table class="data-table" border="2" align="center" cellpadding="10" width="auto">
+    <tr>
+			<td>ID</td>
+			<td>NAME</td>
+            <td>Category</td>
+            <td>Selling Price<br></td>
+            <td>Stock<br></td>
+	</tr>
+    <tbody id="searchProductResult">
+        <?php 
+        $conn=getConnection();
+        $sql = "select * from products";
     	$result = mysqli_query($conn, $sql);
-        $num=mysqli_num_rows($result);
-        if($num > 0)
-        {
-            while($product=mysqli_fetch_array($result))
-                {
-                ?>
-            <ul id="Dataviewer">
-                <li><?php echo 
-                $product['productName']; ?>
-                </li>
-                                
-            </ul>
-                            <?php
+        while ($row=mysqli_fetch_assoc($result)) 
+        { 
+            echo 	
+            "<tr>
+            <td> {$row['pid']} </td>
+            <td>{$row['productName']}</td>
+            <td> {$row['category']} </td>
+            <td> {$row['sellingPrice']} </td>
+            <td> {$row['stock']} </td>   
+          </tr>	
+          ";
         }
-    }   
-        ?> 
-        </td>
-        </table>
-        <script src="../js/serch.js"></script>
+            ?>
+            
+        </tbody>
+            
+            </table>
     <!-- <table border="1" width="100%" height="50px">
         <td colspan="3"><center>Copyright2021@MAB</center></td> 
     </table> 

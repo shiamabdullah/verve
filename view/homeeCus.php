@@ -41,7 +41,7 @@
         <ul>
             <li ><img src="../Assets/MabLogo.jpg" height="70px" align="left"></li>
             <li class="active"><a href="viewProCus.php"><i class="fa fa-user"></i>Profile</a></li>
-            <li><a href="SearchCus.php"><i class="fa fa-shopping-cart"></i>Search</a></li>
+            <li><a href="SearchCus.php"><i class="fa fa-mars-stroke-h"></i>Stoke</a></li>
             <li><a href="cartCus.php"><i class="fa fa-shopping-cart"></i>MyCart</a></li>
             <li><a href="contact.php"><i class="fa fa-compress"></i>Contact</a></li>
             <li><a href="../controller/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
