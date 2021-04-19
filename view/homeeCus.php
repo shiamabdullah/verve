@@ -41,19 +41,12 @@
         <ul>
             <li ><img src="../Assets/MabLogo.jpg" height="70px" align="left"></li>
             <li class="active"><a href="viewProCus.php"><i class="fa fa-user"></i>Profile</a></li>
+            <li><a href="SearchCus.php"><i class="fa fa-shopping-cart"></i>Search</a></li>
             <li><a href="cartCus.php"><i class="fa fa-shopping-cart"></i>MyCart</a></li>
             <li><a href="contact.php"><i class="fa fa-compress"></i>Contact</a></li>
             <li><a href="../controller/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
         </ul>
     </div>
-
-
-
-
-
-
-
-
 
     <table width="100%" border="1">   
         <tr height='100px' align="left">
@@ -75,8 +68,6 @@
 
                 <div class="col-lg-3 col-md-3 col-sm-12" >
 
-                <form>
-
                 <div class="card">
                 <h6 class="card-title bg-info text-white"><?php echo 
                 $product['productName']; ?></h6>
@@ -90,21 +81,14 @@
                 </div>
 
                 <div class="btn-group d-flex">
-                <button class="btn btn-success flex-fill">Add to cart  
-                </button> <button class="btn btn-warning flex-fill "> Add to wishlist</button><br>
+                <button onclick="addToCart('<?php echo $_SESSION['username'] ?>','<?php echo $product['pid'] ?>')" class="btn btn-success flex-fill">Add to cart  </button> 
+                <button class="btn btn-warning flex-fill "> Add to wishlist </button><br>
 
                 </div>
 
-
-
-                </div>
-                </form>
-
                 </div>
 
-
-
-              
+                </div>
 
                 <?php
         }
@@ -145,7 +129,7 @@
     
 </body>
 </html>
-
+<script src="../js/homeeCus.js"></script>
 <?php
 	}else{
 		header('location: ../view/login.html ');

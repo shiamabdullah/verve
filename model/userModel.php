@@ -1,6 +1,10 @@
 <?php
   require_once('db.php');
   
+  function addToCart($username,$pid){
+    
+  }
+
   function validationUser($username,$password)
   {
      $conn=getConnection();
@@ -48,7 +52,7 @@
 
     function updateUser($user){
       $conn = getConnection();
-      $sql = "UPDATE 'user' SET name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']}'";;
+      $sql = "UPDATE 'user' SET name='{$user['username']}', email='{$user['email']}', dob='{$user['dob']} where name='$username''";;
       $result=mysqli_query($conn, $sql);
       if($result){
         return true;
@@ -72,6 +76,14 @@
   //     return false;
   //   }
   // }
+  function searchData($productName){
+    $conn = getConnection();
+    $sql = "select productName from product where productName LIKE :productName ";
+    $result=mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+
+  }
 
 
 ?>

@@ -6,9 +6,9 @@
     {        
         $email = $_POST['email'];
         $username = $_POST['username'];
-        // $password  = $_POST['password'];
-        // $re_password = $_POST['re_password'];
-        //$gender = $_POST['gender'];
+        $password  = $_POST['password'];
+        $re_password = $_POST['re_password'];
+        $gender = $_POST['gender'];
         $dob = $_POST['dob'];
         
         if ($email == "" || $username =="") 

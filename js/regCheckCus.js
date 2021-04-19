@@ -85,7 +85,7 @@ function validatepassword()
 	}
 	else
 	{
-		document.getElementById('passwordmsg').innerHTML="Password and Confirmpassword must be same and also can not be empty";
+		document.getElementById('passwordmsg').innerHTML="Password and Confirmpassword must be same and can't empty";
 		return false;
 	}
 }
@@ -98,7 +98,7 @@ function validategender()
 	var others=document.getElementById('others').checked;
 	if ((male=="") && (female=="") &&(others=="")) 
 	{
-		document.getElementById('gendermsg').innerHTML="Gender Required";
+		document.getElementById('gendermsg').innerHTML="Please select Gender";
 		return false;
 	}
 	else
@@ -127,7 +127,7 @@ function validatedate()
 	}
 	else
 	{
-		document.getElementById('dateofbirthmsg').innerHTML="Date of Birth year 1972 to 2016";
+		document.getElementById('dateofbirthmsg').innerHTML="please set year 1972 to 2016";
 		return false;
 	}
 }
