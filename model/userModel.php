@@ -1,10 +1,19 @@
 <?php
   require_once('db.php');
-  
-  function addToCart($username,$pid){
-    
-  }
 
+  function addToCart($username,$pid){
+    $conn=getConnection();
+    $sql="insert into cart values('', '$username', '$pid')";
+    $result=mysqli_query($conn,$sql);
+    if($result)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  }
   function validationUser($username,$password)
   {
      $conn=getConnection();

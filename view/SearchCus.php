@@ -68,10 +68,11 @@
                 {
                 ?>
             <ul id="Dataviewer">
-                                <li><?php echo 
-                $product['productName']; ?><li>
+                <li><?php echo 
+                $product['productName']; ?>
+                </li>
                                 
-                            </ul>
+            </ul>
                             <?php
         }
     }   
