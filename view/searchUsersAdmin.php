@@ -7,21 +7,18 @@ $conn = getConnection();
 ?>
 
 
-
-</style>
-	
 	<center>
         <h2>User list</h2>
     </center>
-  <div id="search-bar">
+
+  <div id="searchbar">
     <label>Search</label>
    <input type="text" id="searchUser" placeholder="username" >
 
-  
   </div>
   
 
-	<table class="data-table"  align="center" cellpadding="8" width=100%>
+	<table class="data-table"  align="center" cellpadding="8" width=75%>
         <!-- <input type="text" id="searchUser" placeholder="Seach by userId" > -->
       <thead>
      
@@ -34,7 +31,7 @@ $conn = getConnection();
           <td>GENDER</td>
             </tr>
       </thead>
-      <tbody id="result">
+      <tbody id="searchUserResult">
       <?php $sql = "select * from user";
     	$result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result))

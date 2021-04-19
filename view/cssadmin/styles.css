@@ -39,7 +39,13 @@ body{
 }
 
 ul li ul li:hover{
-    background:aquamarine;
+    background:cyan;
+    font-weight: 600;
+
+}
+
+ul li:hover{
+    background:8e9eab;
     font-weight: 600;
 
 }
@@ -310,4 +316,11 @@ ul.a {
         object-fit: cover;
     }
     
-    
+    .searchbar{
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 60px;
+        background-color: #353b48;
+        border-radius: 30px;
+        padding: 10px;
+        }

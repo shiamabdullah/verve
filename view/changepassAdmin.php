@@ -47,16 +47,21 @@
 
     <tbody>
         <td>
-            <ul>
-                <li><a href="viewprofileAdmin.php"> View Profile</a></li>
-                <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
-                <li><a href="changephotoAdmin.php"> Change Profile Picture</a></li>
-                <li><a href="changepassAdmin.php"> Change Passowrd</a></li>
-            </ul>
+        <ul> 
+            <li> <h3>Account </h3>
+
+                <ul>
+                    <li><a href="viewprofileAdmin.php"> View Profile</a></li>
+                    <li><a href="editprofileAdmin.php"> Edit Profile</a></li>
+                    <li><a href="changephotoAdmin.php"> Change Profile Picture</a></li>
+                    <li><a href="changepassAdmin.php"> Change Password</a></li>
+                </ul>
+            </li>
+        </ul>
          </td>
         <td align="center">
         <form method="post" action="../controller/changePassCheckAdmin.php">
-            <fieldset style="width:80%">
+            <fieldset style="width:100%">
                         <legend>PROFILE </legend>
                         <table cellpadding=8>
                             <tr>

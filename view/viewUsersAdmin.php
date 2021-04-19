@@ -8,17 +8,6 @@ $conn = getConnection();
 
 
 
-</style>
-	
-	<center>
-        <h2>User list</h2>
-    </center>
-  <div id="search-bar">
-    <label>Search</label>
-   <input type="text" id="searchUser" placeholder="username" >
-
-  
-  </div>
   
 
 	<table class="data-table"  align="center" cellpadding="8" width=50% border="1">

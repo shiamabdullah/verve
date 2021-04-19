@@ -222,7 +222,7 @@ $(document).ready(function () {
                     });
 
                     const searchUser= $("#searchUser");
-                    const result= $("#result");
+                    const result= $("#searchUserResult");
 
 
                 searchUser.keyup(function(){
@@ -237,11 +237,33 @@ $(document).ready(function () {
                         dataType:"text",
 
                       success:function(data){
-                        $("#result").html(data);
+                        result.html(data);
                     }
                     });
                   });
 
+                  const editUser= $("#editUser");
+                  const editUserResult= $("#editUserResult");
+
+
+                editUser.keyup(function(){
+                  var user = editUser.val();
+                  console.log(user);
+                  $.ajax({    
+                    type:'POST',
+                    url: "../view/scriptadmin/editUser.php",
+                    data:{
+                      s_user:user,
+                    },
+                      dataType:"text",
+
+                    success:function(data){
+                    editUserResult.html(data);
+                  }
+                  });
+                });
+              
+                
                     
                 
         });
