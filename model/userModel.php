@@ -13,6 +13,19 @@
         return false;
     }
   }
+  function addToWish($username,$pid){
+    $conn=getConnection();
+    $sql="insert into wish values('', '$username', '$pid')";
+    $result=mysqli_query($conn,$sql);
+    if($result)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  }
   function validationUser($username,$password)
   {
      $conn=getConnection();
