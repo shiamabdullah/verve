@@ -19,7 +19,9 @@
 				</tr>
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username" value="<?php echo $userdata['username'];?>"></td>
+					<td><input type="text" name="username" id="name" value="<?php echo $userdata['username'];?>">
+					<span id="nameMsg">ss</span>
+				</td>
 				</tr>
 				<tr>
 					<td>Designation</td>

@@ -15,9 +15,7 @@
 			<table class="data-table" align="center" cellpadding="8" width=50% border="1">
                 <tr>
 					<td>ID</td>
-					<td><input type="text" name="id" id="name" value="<?php echo $userdata['id'];?>">
-					<br>
-						<span id="nameMsg"></span>
+					<td><input type="text" name="id" value="<?php echo $userdata['id'];?>">
 				</td>
 				
 				</tr>
@@ -25,7 +23,7 @@
 					<td>Username</td>
 					<td><input type="text" name="username" id="name" value="<?php echo $userdata['name'];?>">
 					<br>
-						<span id="nameMsg"></span>
+						<span id="nameMsg">ss</span>
 					</td>
 				</tr>
 

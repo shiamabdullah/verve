@@ -1,5 +1,5 @@
 <?php ;
-$title='View Users';
+$title='Search Users';
 include('sessionheader.php');
 require_once('../model/admin/db.php');
 $conn = getConnection();
@@ -17,6 +17,12 @@ table, th, td {
 	<center>
         <h1>Employee list</h1>
     </center>
+
+    <div id="searchbar">
+    <label>Search</label>
+   <input type="text" id="searchEmployee" placeholder="Employee Name" >
+  </div>
+  
 	<table class="data-table"  border="2" align="center" cellpadding="10" width="50%">
     <thead>
     <tr>
@@ -27,7 +33,7 @@ table, th, td {
 			<td>SALARY</td>
 		</tr>
         </thead>    
-<tbody>
+<tbody id="searchEmployeeResult">
 
         <?php $sql = "select * from employee ORDER BY id";
     	$result = mysqli_query($conn, $sql);
@@ -36,6 +42,13 @@ table, th, td {
 		{
 
             echo 	"<tr>
+                        <td>{$row['id']}</td>
+                        <td>{$row['username']}</td>
+                        <td>{$row['email']}</td>
+                        <td>{$row['designation']}</td>
+                        <td>{$row['salary']}</td>
+                        
+                    </tr>";  echo 	"<tr>
                         <td>{$row['id']}</td>
                         <td>{$row['username']}</td>
                         <td>{$row['email']}</td>

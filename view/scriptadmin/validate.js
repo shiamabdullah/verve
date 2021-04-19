@@ -7,8 +7,7 @@ $(document).ready(function () {
         const repass = $("#repass");
         const newPass = $("#newPass");
         const conPass = $("#conPass");
-        //..useremail
-        const uEmail=$("#userEmail");
+       
         const userName=$("#userName");
     
     
@@ -24,7 +23,6 @@ $(document).ready(function () {
         const newPassMsg = $("#newPassMsg");
         const conPassMsg = $("#conPassMsg");
 
-        const userEmailMsg=$("#userEmailMsg");
 
    
     
@@ -99,30 +97,7 @@ $(document).ready(function () {
     
             }
         });
-        // email.keyup(function(){
-        //     var emailSplit=email.val().split("@");
-            
-        //     console.log(emailSplit[1].indexOf("."));
-        //     var dot = emailSplit[1].indexOf(".");
-        //     //var len = emailSplit[1].length;
-        //     var dotSplits = emailSplit[1].split(".");
-        //     var dotCount = dotSplits.length - 1;
-    
-        //      if(email.val().indexOf("@") === -1){
-        //         emailMsg.css("color", "red");
-        //         emailMsg.html("⚠️email doesn't have @ character");
-                
-        //     }
-            
-        //     else if(dot == -1 || dot < 2 || dotCount > 2)
-        //     {
-        //         emailMsg.css("color", "red");
-        //         emailMsg.html("⚠️Dot is not present, and not atleast 1 character after @");
-    
-        //     }else{
-        //         emailMsg.css("color", "green");
-        //         emailMsg.html("✅ okay");
-        //     } });
+       
     
             email.keyup(function(){
                //alert(email.val());
@@ -171,6 +146,33 @@ $(document).ready(function () {
                     }     
                 });
                 });
+                 //..useremail
+                const uEmail=$("#userEmail");
+                const userEmailMsg=$("#userEmailMsg");
+
+
+                uEmail.keyup(function(){
+                    //alert(email.val());
+                     var userEmail= email.val();
+                     $.ajax({
+                         url:'../view/scriptadmin/userEmailCheck.php',
+                         method: "POST",
+                         data:{user_email:userEmail},
+                         dataType:"text",
+                         success:function(data){
+                             console.log(data);
+                             if(data!='0'){
+                                userEmailMsg.css("color", "red");
+                                userEmailMsg.html("⚠️Already Used Try a different Email");
+                             }
+                             else{
+                                userEmailMsg.css("color", "green");
+                                userEmailMsg.html("✅ okay");
+         
+                             }
+                         }     
+                     });
+                     });
     
                 newPass.keyup(function(){
                     if(newPass.val().length <8){
@@ -262,7 +264,50 @@ $(document).ready(function () {
                   }
                   });
                 });
+
+                const searchEmployee= $("#searchEmployee");
+                const searchEmployeeResult= $("#searchEmployeeResult");
+
+
+                searchEmployee.keyup(function(){
+                    var employee = searchEmployee.val();
+                    console.log(employee);
+                    $.ajax({    
+                      type:'POST',
+                      url: "../view/scriptadmin/searchEmployee.php",
+                      data:{
+                        s_employee:employee,
+                      },
+                        dataType:"text",
+
+                      success:function(data){
+                        searchEmployeeResult.html(data);
+                    }
+                    });
+                  });
               
+
+                  const editEmployee= $("#editEmployee");
+                  const editEmployeeResult= $("#editEmployeeResult");
+  
+  
+                  editEmployee.keyup(function(){
+                      var employee = editEmployee.val();
+                      console.log(employee);
+                      $.ajax({    
+                        type:'POST',
+                        url: "../view/scriptadmin/editEmployee.php",
+                        data:{
+                          s_employee:employee,
+                        },
+                          dataType:"text",
+  
+                        success:function(data){
+                            editEmployeeResult.html(data);
+                      }
+                      });
+                    });
+                
                 
                     
                 
