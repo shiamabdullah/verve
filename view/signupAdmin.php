@@ -12,7 +12,7 @@
                 <tr >
                     <td>Name<br></td>
                     <td>
-                        <input type="text" id="name" name="userName" value="" placeholder= "Enter Your Name" onkeyup="validateName();" "/>
+                        <input type="text" id="name" name="name" value="" placeholder= "Enter Your Name" onkeyup="validateName();" "/>
 						<br>
 						<span id="nameMsg"> </span>
 
@@ -24,19 +24,19 @@
                     <td>
                         <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" onkeyup="validateUsername();"required">
 						<br>
-						<span id="userNameMsg"> ss</span>
+						<span id="userNameMsg"> </span>
 						</td>
                 </tr>
                 <tr>
 					<td>Password</td>
-					<td><input type="password" name="password" id="password" value="" placeholder= "Enter Your password" required ">
+					<td><input type="password" name="password" id="password" value="" placeholder= "Enter Your password"onkeyup="validatePassword();" required ">
 					<br>
 					<span id="passwordMsg"> </span>
 					</td>
 				</tr>
 				<tr>
 					<td>Confirm Password</td>
-					<td><input type="password" name="repass" id="repass" value="" placeholder="Enter your password again"required>
+					<td><input type="password" name="repass" id="repass" value="" placeholder="Enter your password again" onkeyup="validateRepass();" required>
 					<br><span id="repassMsg"> </span>
 					</td>
 				</tr>
@@ -57,7 +57,7 @@
 					</tr>
                 <tr>
 					<td>Date of Birth: </td>
-					<td> <input type="date" name="dob" value="" /> </td>
+					<td> <input type="date" name="dob" value="" required /> </td>
                     <td > </td>
 				</tr>
                 <tr>
