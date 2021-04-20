@@ -13,6 +13,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="Search.js"></script>
 </head>
 <body>
     <div class="menu-bar">
@@ -24,42 +25,19 @@
             <li><a href="../controller/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
         </ul>
     </div>
-    <div id="searchbar">
-    <label>Search Product: </label>
-   <input type="text" id="searchProduct" placeholder="Product Name" >
 
-  </div>
+    <div align="center">
+    <h1 id='myid'>Search Product & Check Stock</h1>
+    <form>
+		<input type="text" name="name" id="name" value="" placeholder="Product Name" onkeyup="ajax()" />
+		<input type="button" name="" value="click" onclick="">
+	</form>
+    <div id='result'></div>
+    </div>
+   
   
-	<table class="data-table" border="2" align="center" cellpadding="10" width="auto">
-    <tr>
-			<td>ID</td>
-			<td>NAME</td>
-            <td>Category</td>
-            <td>Selling Price<br></td>
-            <td>Stock<br></td>
-	</tr>
-    <tbody id="searchProductResult">
-        <?php 
-        $conn=getConnection();
-        $sql = "select * from products";
-    	$result = mysqli_query($conn, $sql);
-        while ($row=mysqli_fetch_assoc($result)) 
-        { 
-            echo 	
-            "<tr>
-            <td> {$row['pid']} </td>
-            <td>{$row['productName']}</td>
-            <td> {$row['category']} </td>
-            <td> {$row['sellingPrice']} </td>
-            <td> {$row['stock']} </td>   
-          </tr>	
-          ";
-        }
-            ?>
+        
             
-        </tbody>
-            
-            </table>
     <!-- <table border="1" width="100%" height="50px">
         <td colspan="3"><center>Copyright2021@MAB</center></td> 
     </table> 
