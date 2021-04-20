@@ -77,9 +77,8 @@
 					<td >
                     	
                         <ul>
-                            <li><center>
+                            <li>
 						<h3> Products</h3>
-						</center>
                             <ul>
                                 <li><a href="addProductAdmin.php"> Add Product</a></li>
                                 <li><a href="viewProductAdmin.php"> View Product</a></li>

@@ -27,8 +27,14 @@ if (session_status() == PHP_SESSION_NONE) {
 					<div class="logo-images">
 						<img src="../model/media/logo.jpg" height="60px">
 						
-					</div>		
-					</td>
+					</div>	
+					
+					<div class="logo_container">
+						<h3>
+							M<span>AB</span>
+						</h3>
+					
+					</div>	
 					<td align="center" colspan="2">
 				
 				<div class="profile-images">
@@ -47,7 +53,6 @@ if (session_status() == PHP_SESSION_NONE) {
 										  
 					  </td>
 				</tr>
-			</div>
 
 	
 	</table>

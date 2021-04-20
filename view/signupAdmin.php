@@ -12,7 +12,7 @@
                 <tr >
                     <td>Name<br></td>
                     <td>
-                        <input type="text" id="name" name="name" value="" placeholder= "Enter Your Name" "/>
+                        <input type="text" id="name" name="userName" value="" placeholder= "Enter Your Name" onkeyup="validateName();" "/>
 						<br>
 						<span id="nameMsg"> </span>
 
@@ -22,9 +22,9 @@
                 <tr>
                     <td>User Name<br></td>
                     <td>
-                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" required">
+                        <input type="text" id="userName" name="username" value="" placeholder= "Enter your username/id" onkeyup="validateUsername();"required">
 						<br>
-						<span id="userNameMsg"> </span>
+						<span id="userNameMsg"> ss</span>
 						</td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="email" name="email" id="email" value="" placeholder= "Enter your email">
+					<td><input type="email" name="email" id="email" value="" placeholder= "Enter your email" onkeyup="validateEmail();">
 					<br><span id="emailMsg"> </span>
 				</td>
 				</tr>
@@ -79,72 +79,7 @@
 		</fieldset>
 	</form>
 	
-	<!-- <script>
-	
-
-
-	const myArray = ["1", "2","3","4","5","6","7","8","9"];
-	
-
-	function nameValidate(){
-		let name= document.getElementById("name");
-		let nameMsg=document.getElementById('nameMsg');
-
-		if((name.value.length <= 2) || (name.value.length > 20)){
-			
-			nameMsg.style.color="red";
-			nameMsg.innerHTML="Must be between 2 and 20 chars!";
-
-			for(x=0; x<myArray.length; x++){
-				if(name.value.includes(myArray[x])){
-					nameMsg.innerHTML = "name cannot include a number";
-				}
-			
-		}
-		 else if( !isNaN(name.value) ){
-				nameMsg.style.color="red";
-				nameMsg.innerHTML="Can't contain numbers only";
-
-			}
-		
-		else{
-			nameMsg.style.color="green";
-				nameMsg.innerHTML="Okay";
-		}
-	}
-
-	function passwordValidate(){
-		let password= document.getElementById("password");
-		let passwordMsg=document.getElementById('passwordMsg');
-
-		if((password.value.length < 8)){
-			
-			passwordMsg.style.color="red";
-			passwordMsg.innerHTML="Must be atleast 8 characters";
-
-		
-		}
-		 
-		else{
-			passwordMsg.style.color="green";
-			passwordMsg.innerHTML="Okay";
-		}
-	}
-
-	function repassValidate(){
-		let repass= document.getElementById("repass");
-		let repass=document.getElementById('repass');
-		let password= document.getElementById("password");
-
-		console.log(password+repass);
-	}
-		
-			
-
-
-
-	</script> -->
-
+	<script src="../view/scriptadmin/signupValidate.js"></script>
 <?php 
 include('footer.php');
  ?>

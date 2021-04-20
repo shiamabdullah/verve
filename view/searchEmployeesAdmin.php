@@ -48,14 +48,7 @@ table, th, td {
                         <td>{$row['designation']}</td>
                         <td>{$row['salary']}</td>
                         
-                    </tr>";  echo 	"<tr>
-                        <td>{$row['id']}</td>
-                        <td>{$row['username']}</td>
-                        <td>{$row['email']}</td>
-                        <td>{$row['designation']}</td>
-                        <td>{$row['salary']}</td>
-                        
-                    </tr>";
+                    </tr>";  
         }
     ?>
     </tbody>
