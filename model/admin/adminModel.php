@@ -17,7 +17,6 @@
         $sql = "select * from admin where username='{$username}' and password='{$password}'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($result);
-        echo $row;
         if($row){
             return true;
           }

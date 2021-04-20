@@ -23,7 +23,11 @@
             <td> {$row['stock']} </td>
             <td> {$row['displayable']}</td>
             <td> {$row['discount']}</td>
+            <td>
             <a class=\"btn btn-success\" href=\"editUserAdmin.php?id={$row['pid']}\" role=\"button\">Edit</a>
+
+            
+            </td>
 
            
             

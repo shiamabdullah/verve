@@ -12,11 +12,21 @@
 		//echo $username,$previousPassword,$newPassword,$confirmPassword;
 		
         $status= validateUser($username, $previousPassword);
-
        if($status){
-           if(strlen($newPassword)>8 and $newPassword===$confirmPassword)
+           if(strlen($newPassword)>=8 and $newPassword===$confirmPassword)
            {
-                updatePassword($username,$newPassword);
+                $status=updatePassword($username,$newPassword);
+                //echo $status;
+                if($status){
+                    $_SESSION['stat']="Updated Password";
+                    $_SESSION['stat_code']="Okay";
+                    header('location: ../view/viewProfileAdmin.php');
+
+                }
+                    $_SESSION['stat']="Not Updated Try again";
+                    $_SESSION['stat_code']="Error";
+                    header('location: ../view/viewProfileAdmin.php');
+                
            }
        }
         
