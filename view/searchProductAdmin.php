@@ -23,7 +23,7 @@ table, th, td {
     
   <div id="searchbar">
     <label>Search</label>
-   <input type="text" id="searchProduct" placeholder="Product Name" >
+   <input type="text" id="searchProduct" placeholder="Product Name" onkeyup="ajax()">
 
   </div>
   
@@ -76,6 +76,27 @@ table, th, td {
             
             </table>
 
+
+<script type="text/javascript">
+    "use strict"
+
+function ajax(){
+	
+	const data = document.getElementById('searchProduct').value;
+	const xhttp = new XMLHttpRequest();
+
+	xhttp.open('POST', '../view/scriptadmin/searchProduct.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('searchProductResult').innerHTML = this.responseText;
+		}
+	}
+	xhttp.send('name='+data);
+
+}
+</script>
 
 <?php 
 include('footer.php');

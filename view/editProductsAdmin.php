@@ -18,7 +18,7 @@ table, th, td {
 	  
   <div id="searchbar">
     <label>Search</label>
-   <input type="text" id="editProduct" placeholder="Product Name" >
+   <input type="text" id="editProduct" placeholder="Product Name" onkeyup="ajax()">
 
   </div>
 	<center>
@@ -51,7 +51,7 @@ table, th, td {
         {   
             ?>
               <tr>
-              <td><?php echo $row['pid']; ?></td>
+                <td><?php echo $row['pid']; ?></td>
                 <td><?php echo $row['productName']; ?></td>
                 <td><?php echo $row['category']; ?></td>
                 <td><?php echo $row['subCategory']; ?></td>
@@ -76,6 +76,26 @@ table, th, td {
             
             </table>
 
+<script type="text/javascript">
+"use strict"
+
+    function ajax(){
+      
+      const data = document.getElementById('editProduct').value;
+      const xhttp = new XMLHttpRequest();
+
+      xhttp.open('POST', '../view/scriptadmin/editProduct.php', true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      
+      xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          document.getElementById('editProductResult').innerHTML = this.responseText;
+        }
+      }
+      xhttp.send('name='+data);
+
+    }
+</script>
 
 <?php 
 include('footer.php');

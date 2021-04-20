@@ -2,7 +2,8 @@
   require('../../model/admin/db.php');
   $conn=getConnection();
  
-    $product = $_POST["e_product"];
+    $product = $_REQUEST['name'];
+
     $sql = "SELECT * FROM `products` WHERE `productName` LIKE '%".$product."%'";
     $result=mysqli_query($conn,$sql);
     
