@@ -20,7 +20,7 @@ table, th, td {
 
     <div id="searchbar">
     <label>Search</label>
-   <input type="text" id="searchEmployee" placeholder="Employee Name" >
+   <input type="text" id="searchEmployee" placeholder="Employee Name"onkeyup="ajax()" >
   </div>
   
 	<table class="data-table"  border="2" align="center" cellpadding="10" width="50%">
@@ -54,6 +54,27 @@ table, th, td {
     </tbody>
 
     </table>
+
+    <script type="text/javascript">
+    "use strict"
+
+    function ajax(){
+	
+	const data = document.getElementById('searchEmployee').value;
+	const xhttp = new XMLHttpRequest();
+
+	xhttp.open('POST', '../view/scriptadmin/searchEmployee.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('searchEmployeeResult').innerHTML = this.responseText;
+		}
+	}
+	xhttp.send('name='+data);
+
+}
+</script>
 
 
 <?php 

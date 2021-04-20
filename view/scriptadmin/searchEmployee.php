@@ -1,8 +1,8 @@
 <?php 
   require('../../model/admin/db.php');
   $conn=getConnection();
- 
-    $employee = $_POST["s_employee"];
+    $employee = $_REQUEST['name'];
+
     $sql = "SELECT * FROM `employee` WHERE `username` LIKE '%".$employee."%'";
     $result=mysqli_query($conn,$sql);
     
