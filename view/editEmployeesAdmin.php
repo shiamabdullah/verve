@@ -14,7 +14,7 @@ $conn = getConnection();
 
 <div id="searchbar">
     <label>Search</label>
-    <input type="text" id="editEmployee" placeholder="Employee Name">
+    <input type="text" id="editEmployee" placeholder="Employee Name" onkeyup="ajax()">
 </div>
 
 <table class="data-table" border="1" align="center" cellpadding="10" width=50%>
@@ -54,6 +54,27 @@ $conn = getConnection();
 
     </tbody>
 </table>
+
+<script type="text/javascript">
+    "use strict"
+
+    function ajax(){
+	
+	const data = document.getElementById('editEmployee').value;
+	const xhttp = new XMLHttpRequest();
+
+	xhttp.open('POST', '../view/scriptadmin/editEmployee.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('editEmployeeResult').innerHTML = this.responseText;
+		}
+	}
+	xhttp.send('name='+data);
+
+}
+</script>
 
 
 <?php
