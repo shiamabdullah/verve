@@ -2,8 +2,8 @@
   require('../../model/admin/db.php');
   $conn=getConnection();
  
-    $users = $_POST["s_user"];
-    $sql = "SELECT * FROM `user` WHERE `name` LIKE '%".$users."%'";
+  $name = $_REQUEST['name'];
+    $sql = "SELECT * FROM `user` WHERE `name` LIKE '%".$name."%'";
     $result=mysqli_query($conn,$sql);
     
     if(mysqli_num_rows($result)>0){

@@ -13,7 +13,7 @@ $conn = getConnection();
 
   <div id="searchbar">
     <label>Search</label>
-   <input type="text" id="searchUser" placeholder="username" >
+   <input type="text" id="searchUser" placeholder="username" onkeyup="ajax()">
 
   </div>
   
@@ -24,7 +24,7 @@ $conn = getConnection();
      
 
       </tr>
-            <tr>
+          <tr>
           <td>ID</td>
           <td>NAME</td>
           <td> EMAIL</td>
@@ -52,6 +52,26 @@ $conn = getConnection();
     </tbody>
     </table>
 
+<script type="text/javascript">
+"use strict"
+
+function ajax(){
+	
+	const data = document.getElementById('searchUser').value;
+	const xhttp = new XMLHttpRequest();
+
+	xhttp.open('POST', '../view/scriptadmin/searchUser.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('searchUserResult').innerHTML = this.responseText;
+		}
+	}
+	xhttp.send('name='+data);
+
+}
+</script>
 
 <?php 
 include('footer.php');

@@ -129,7 +129,7 @@ function validateEmail()
 	}
 	if (repass!=password) 
 	{
-		repassMsg.innerHTML="⚠️does't match with password";
+		repassMsg.innerHTML="⚠️doesn't match with password";
 		return false;
 	}
 

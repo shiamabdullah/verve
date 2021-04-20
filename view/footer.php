@@ -6,7 +6,7 @@
     
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="scriptadmin/validate.js"></script>
+    <!-- <script src="scriptadmin/validate.js"></script> -->
     <script src="../view/scriptadmin/sweetalert.js"></script>
     <?php 
     if (isset($_SESSION['stat']) && $_SESSION['stat']!=''){

@@ -1,11 +1,11 @@
 <?php 
   require('../../model/admin/db.php');
   $conn=getConnection();
- 
-    $users = $_POST["s_user"];
-    $sql = "SELECT * FROM `user` WHERE `name` LIKE '%".$users."%'";
+    $response;
+    $name = $_REQUEST['name'];
+    $sql = "SELECT * FROM `user` WHERE `name` LIKE '%".$name."%'";
     $result=mysqli_query($conn,$sql);
-    
+    $response ="";
     if(mysqli_num_rows($result)>0){
         while ($row=mysqli_fetch_assoc($result)) 
         {
@@ -21,7 +21,7 @@
         }
     }
     else{
-        echo "<tr><td>0 result's found</td></tr>";
+        echo"<tr><td><td><td><td>0 result's found</td></td></td></td></tr>";
     }
     
 ?>
