@@ -1,28 +1,31 @@
 <?php 
-  require_once('../model/userModel.php');
-  
-    $conn=getConnection();
-    $product = $_POST["s_product"];
-    $sql = "SELECT * FROM `products` WHERE `productName` LIKE '%".$product."%'";
-    $result=mysqli_query($conn,$sql);
-    
-    if(mysqli_num_rows($result)>0){
+require_once('../model/userModel.php');
+      
+      $name=$_REQUEST['name'];
+      $conn=getConnection();
+      $sql = "select * from products where productName like '%{$name}%'";
+    	$result = mysqli_query($conn, $sql);
+      $response= "<table border='1'>
+        <tr>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>Category</td>
+                <td>Selling Price<br></td>
+                <td>Stock<br></td>
+        </tr>";
         while ($row=mysqli_fetch_assoc($result)) 
-        {           
-            echo 	
-            "<tr>
+        { 
+            $response .="
+           
+            <tr>
             <td> {$row['pid']} </td>
             <td>{$row['productName']}</td>
             <td> {$row['category']} </td>
-           
             <td> {$row['sellingPrice']} </td>
-            <td> {$row['stock']} </td>            
+            <td> {$row['stock']} </td>   
           </tr>	
-          ";          
+          ";
         }
-    }
-    else{
-        echo "<tr><td>0 result's found</td></tr>";
-    }
-    
+        $response .="</table>";
+        echo $response;
 ?>
