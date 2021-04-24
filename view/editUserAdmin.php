@@ -33,7 +33,7 @@
 				
 				<tr>
 					<td>Email</td>
-					<td><input type="email" id="userEmail" name="email" value="<?php echo $userdata['email'];?>">
+					<td><input type="email" id="userEmail" name="email" onkeyup="validateEmailCus()" value="<?php echo $userdata['email'];?>">
 					<br>
 						<span id="userEmailMsg"></span></td>
 				</tr>
@@ -51,3 +51,23 @@
 <?php
 	include('footer.php');
 ?>
+
+<script  type="text/javascript">
+function validateEmailCus()
+{
+	const data = document.getElementById('userEmail').value;
+	const xhttp = new XMLHttpRequest();
+
+	xhttp.open('POST', '../view/scriptadmin/userEmailCheck.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('userEmailMsg').innerHTML = this.responseText;
+		}
+	}
+	xhttp.send('name='+data);
+
+
+}
+</script>
