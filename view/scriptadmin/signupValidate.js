@@ -1,35 +1,20 @@
 "use strict"
 function validateUsername()
 {
-	let userName=document.getElementById('userName').value;
-	let userNameMsg=document.getElementById('userNameMsg');
+	const data = document.getElementById('userName').value;
+	const xhttp = new XMLHttpRequest();
 
-	if (userName=="") 
-	{
-		userNameMsg.innerHTML="⚠️Name can not be empty";
-		return false;
-	}
-
-	else if(!isNaN(userName))
-	{
-		userNameMsg.innerHTML="⚠️Name can't only contain numbers";
-		return false;
-
-	}
-	else if(userName.length<2){
-		userNameMsg.innerHTML="⚠️Must be atleast two characters";
-		return false;
-	}
-	else{
-		userNameMsg.innerHTML="✅ okay";
-		return true;
-
-
-	}
-	return true;
+	xhttp.open('POST', '../view/scriptadmin/adminNameCheck.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	
-	
-	
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('userNameMsg').innerHTML = this.responseText;
+		}
+	}
+	xhttp.send('name='+data);
+
+
 }
 
 function validateName()
