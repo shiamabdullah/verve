@@ -54,7 +54,7 @@
                             <tr>
                             <td>User Name<br></td>
                             <td>
-                                <input type="text" name="username" value="<?php echo$user['username'];?>" readonly/>
+                                <input type="text" name="username" value="<?php echo$user['username'];?>" onkeyup="validateUsername();" readonly/>
                             </td>
                             </tr>
 
@@ -70,7 +70,7 @@
                     
                             <tr>
                             <td>Email<br></td>
-                            <td><input type="email" name="email" id="email" value="<?php echo$user['email']; ?>">
+                            <td><input type="email" name="email" id="email" value="<?php echo$user['email']; ?>" onkeyup="validateEmail();" >
                             <br>
                             <span id="emailMsg"> </span>
 
@@ -115,6 +115,7 @@
                     
     </table>
     
+	<script src="../view/scriptadmin/signupValidate.js"></script>
 
 <?php 
 include('footer.php');
