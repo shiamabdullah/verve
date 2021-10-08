@@ -1,5 +1,3 @@
-## VERVE
-
 ---
 ### Table of Contents
 
