@@ -5,7 +5,7 @@
 
 - [Description](#description)
 - [License](#license)
-- [Author Info](#author-info)
+- [Contributors](#contributors)
 
 ---
 
@@ -33,8 +33,6 @@ Employee: Employees  can search customers,  check stock and receive and verify c
 
 MIT License
 
-Copyright (c) [2021] [Abdullah Al Mamun Shiam]
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -55,9 +53,10 @@ SOFTWARE.
 
 [Back To The Top](#read-me-template)
 
-## Author Info
+## Contributors
 
-- Facebook - [@shiam.abdullah1](https://www.facebook.com/shiamabdullah1/)
-- Website - [Shiamify](https://boring-euclid-df9d83.netlify.app/)
+- [Abdullah Al Mamun Shiam](https://shiam-portfolio.netlify.app/)
+- [Md. Shahil Patwary](https://www.facebook.com/shaisob)
+- [Lamia Sarwar](https://www.facebook.com/lamia199.sarwar)
 
 [Back To The Top](#read-me-template)
